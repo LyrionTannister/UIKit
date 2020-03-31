@@ -16,21 +16,28 @@ class LoginController: UIViewController {
     @IBOutlet weak var userPasswordLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-
+    @IBOutlet weak var loginScrollView: UIScrollView!
+    
     let notificationCenter = NotificationCenter.default
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        loginScrollView?.addGestureRecognizer(hideKeyboardGesture)
+
         notificationCenter.addObserver(
             self,
             selector: #selector(keyboardWasShown(notification:)),
             name: UIResponder.keyboardWillShowNotification,
             object: nil)
+
         notificationCenter.addObserver(
             self,
             selector: #selector(keyboardWasShown(notification:)),
             name: UIResponder.keyboardDidChangeFrameNotification,
             object: nil)
+
         notificationCenter.addObserver(
             self,
             selector: #selector(keyboardWillBeHidden(notification:)),
@@ -83,8 +90,13 @@ class LoginController: UIViewController {
         let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
         scrollBottomConstraint.constant = frame.height
     }
+
     @objc func keyboardWillBeHidden(notification: Notification) {
         scrollBottomConstraint.constant = 0
+    }
+    
+    @objc func hideKeyboard() {
+        self.loginScrollView.endEditing(true)
     }
     // swiftlint:enable force_cast
 }

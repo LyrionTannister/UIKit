@@ -25,7 +25,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4k-5F-xuT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="root" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4k-5F-xuT">
                                         <rect key="frame" x="25" y="100" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -80,6 +80,7 @@
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="HAb-g4-zpb" id="bQZ-gv-r7j"/>
+                        <outlet property="loginScrollView" destination="DLk-IZ-2is" id="HK1-G7-jVF"/>
                         <outlet property="loginTextField" destination="e4k-5F-xuT" id="cfj-yL-7IN"/>
                         <outlet property="passwordTextField" destination="HDL-3m-xqJ" id="eSN-Ld-bVS"/>
                         <outlet property="scrollBottomConstraint" destination="xeE-k3-B0j" id="Pkt-J4-rNk"/>
