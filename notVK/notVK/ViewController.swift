@@ -37,6 +37,7 @@ class ViewController: UIViewController {
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
     }
+
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         switch identifier {
         case "loginSegue":
@@ -69,6 +70,7 @@ class ViewController: UIViewController {
         // Показываем UIAlertController
         present(alert, animated: true)
     }
+
     // swiftlint:disable force_cast
     @objc func keyboardWasShown(notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo as! [String: Any]
