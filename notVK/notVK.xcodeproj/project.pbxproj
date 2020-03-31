@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09372F1F24337F31009388FA /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09372F1E24337F31009388FA /* FriendsTableViewController.swift */; };
 		09997FCA2432B1E6003891DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09997FC92432B1E6003891DA /* AppDelegate.swift */; };
 		09997FCC2432B1E6003891DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09997FCB2432B1E6003891DA /* SceneDelegate.swift */; };
 		09997FCE2432B1E6003891DA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09997FCD2432B1E6003891DA /* LoginController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09372F1E24337F31009388FA /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		09997FC62432B1E6003891DA /* notVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09997FC92432B1E6003891DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09997FCB2432B1E6003891DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09372F2024337FAB009388FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				09997FCD2432B1E6003891DA /* LoginController.swift */,
+				09372F1E24337F31009388FA /* FriendsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		09372F2124338459009388FA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		09997FBD2432B1E6003891DA = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +76,10 @@
 		09997FC82432B1E6003891DA /* notVK */ = {
 			isa = PBXGroup;
 			children = (
+				09372F2124338459009388FA /* Extensions */,
+				09372F2024337FAB009388FA /* Controllers */,
 				09997FC92432B1E6003891DA /* AppDelegate.swift */,
 				09997FCB2432B1E6003891DA /* SceneDelegate.swift */,
-				09997FCD2432B1E6003891DA /* LoginController.swift */,
 				09997FCF2432B1E6003891DA /* Main.storyboard */,
 				09997FD52432B1ED003891DA /* Assets.xcassets */,
 				09997FD72432B1ED003891DA /* LaunchScreen.storyboard */,
@@ -145,6 +164,7 @@
 				09997FCE2432B1E6003891DA /* LoginController.swift in Sources */,
 				09997FCA2432B1E6003891DA /* AppDelegate.swift in Sources */,
 				09997FCC2432B1E6003891DA /* SceneDelegate.swift in Sources */,
+				09372F1F24337F31009388FA /* FriendsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

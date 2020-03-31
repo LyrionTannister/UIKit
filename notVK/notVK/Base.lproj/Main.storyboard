@@ -30,7 +30,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDL-3m-xqJ">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="toor" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDL-3m-xqJ">
                                         <rect key="frame" x="25" y="200" width="364" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -95,13 +95,13 @@
         <!--Friends-->
         <scene sceneID="cTh-ih-eaf">
             <objects>
-                <tableViewController id="tTl-Uw-3dC" sceneMemberID="viewController">
+                <tableViewController id="tTl-Uw-3dC" customClass="FriendsTableViewController" customModule="notVK" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2IG-G8-ah1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="729-lE-0Ib">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="friendsCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsCell" id="729-lE-0Ib">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="729-lE-0Ib" id="5pW-XT-9bu">
@@ -118,8 +118,15 @@
                             <outlet property="delegate" destination="tTl-Uw-3dC" id="4XO-xC-Pam"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="vbb-jV-M6c"/>
-                    <navigationItem key="navigationItem" title="Friends" id="e5m-ap-Vib"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="person.fill" catalog="system" id="bWz-lP-3ND"/>
+                    <navigationItem key="navigationItem" title="Friends" id="e5m-ap-Vib">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="person.crop.circle.fill.badge.plus" catalog="system" id="SxM-nK-UiK">
+                            <connections>
+                                <segue destination="R77-kL-9PI" kind="show" id="m62-EI-TKx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUz-mG-Lft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,28 +151,60 @@
             </objects>
             <point key="canvasLocation" x="512" y="-77"/>
         </scene>
+        <!--Find friend-->
+        <scene sceneID="BOF-th-hhX">
+            <objects>
+                <tableViewController title="Find friend" id="R77-kL-9PI" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="64X-Jp-ewh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="g48-ja-ptK">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g48-ja-ptK" id="CZV-7N-jX0">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="R77-kL-9PI" id="fRz-g5-9Dl"/>
+                            <outlet property="delegate" destination="R77-kL-9PI" id="PWk-MA-EDy"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ix7-Uh-T8W"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Snk-pe-LcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3229" y="-975"/>
+        </scene>
         <!--Collection View Controller-->
         <scene sceneID="RYl-mq-4jT">
             <objects>
                 <collectionViewController id="amd-BM-m7o" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="CuA-K6-GeL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Fci-iD-yJt">
-                            <size key="itemSize" width="50" height="50"/>
+                            <size key="itemSize" width="185" height="181"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xLo-Xx-tH7">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="185" height="181"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lEw-G6-naU">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="185" height="181"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
+                                <size key="customSize" width="185" height="181"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -177,13 +216,13 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QlN-Wa-5BJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3015" y="-410"/>
+            <point key="canvasLocation" x="3230" y="-310"/>
         </scene>
-        <!--Item-->
+        <!--Groups-->
         <scene sceneID="Pct-Cf-lsM">
             <objects>
                 <navigationController id="gQX-Y4-6Nw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9XH-Bc-UPS"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="person.3.fill" catalog="system" landscapeImage="person.3.fill" id="9XH-Bc-UPS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CXb-TT-h1p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -201,7 +240,7 @@
             <objects>
                 <tableViewController id="kAf-Ke-oQA" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z8p-TA-DLS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -219,14 +258,15 @@
                             <outlet property="delegate" destination="kAf-Ke-oQA" id="oRX-Ki-ROK"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="hbw-o5-ktL"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="person.3.fill" catalog="system" landscapeImage="person.3.fill" id="Kxa-tM-Jys"/>
                     <navigationItem key="navigationItem" title="Groups" id="c39-LS-Ch9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="S7l-h0-81c">
+                        <barButtonItem key="rightBarButtonItem" image="plus.square.fill" catalog="system" id="S7l-h0-81c">
                             <connections>
-                                <segue destination="lRO-Vf-A2F" kind="show" id="kiI-Fp-70Z"/>
+                                <segue destination="lRO-Vf-A2F" kind="presentation" id="kiI-Fp-70Z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ee-5x-eg3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -262,11 +302,11 @@
             </objects>
             <point key="canvasLocation" x="3015" y="344"/>
         </scene>
-        <!--Item-->
+        <!--Friends-->
         <scene sceneID="Xsi-iS-g02">
             <objects>
                 <navigationController id="o9M-9X-nbo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Sl1-Rn-gE0"/>
+                    <tabBarItem key="tabBarItem" title="Friends" image="person.fill" catalog="system" id="Sl1-Rn-gE0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0jx-sB-uVG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -280,4 +320,10 @@
             <point key="canvasLocation" x="1333" y="-408"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.crop.circle.fill.badge.plus" catalog="system" width="128" height="101"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus.square.fill" catalog="system" width="128" height="114"/>
+    </resources>
 </document>
