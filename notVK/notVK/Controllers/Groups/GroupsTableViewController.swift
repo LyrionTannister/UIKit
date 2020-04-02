@@ -10,7 +10,7 @@ import UIKit
 
 class GroupsTableViewController: UITableViewController {
 
-    var myGroups = [String]()
+    var myGroups = Group.init(groups: [])
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,12 @@ class GroupsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myGroups.count
+        return myGroups.myGroups.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath) as! GroupsViewCell
-        let group = myGroups[indexPath.row]
+        let group = myGroups.myGroups[indexPath.row]
         cell.myGroupLabel.text = group
         return cell
     }
@@ -50,7 +50,7 @@ class GroupsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            myGroups.remove(at: indexPath.row)
+            myGroups.myGroups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
@@ -62,9 +62,9 @@ class GroupsTableViewController: UITableViewController {
                 return
             }
             if let indexPath = allGroupsController.tableView.indexPathForSelectedRow {
-                let group = allGroupsController.allGroups[indexPath.row]
-                if !myGroups.contains(group){
-                    myGroups.append(group)
+                let group = allGroupsController.allGroups.myGroups[indexPath.row]
+                if !myGroups.myGroups.contains(group){
+                    myGroups.myGroups.append(group)
                     tableView.reloadData()
                 }
             }

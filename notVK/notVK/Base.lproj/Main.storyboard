@@ -36,7 +36,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAb-g4-zpb">
-                                        <rect key="frame" x="181" y="700" width="52" height="30"/>
+                                        <rect key="frame" x="181" y="300" width="52" height="30"/>
                                         <state key="normal" title="  Войти"/>
                                         <connections>
                                             <segue destination="tsq-cJ-AnO" kind="show" identifier="loginSegue" id="1Qv-jv-UcA"/>
@@ -64,7 +64,7 @@
                                     <constraint firstAttribute="trailing" secondItem="HDL-3m-xqJ" secondAttribute="trailing" constant="25" id="pOq-zJ-KMy"/>
                                     <constraint firstAttribute="trailing" secondItem="e4k-5F-xuT" secondAttribute="trailing" constant="25" id="qJZ-AQ-qTq"/>
                                     <constraint firstItem="HDL-3m-xqJ" firstAttribute="top" secondItem="DLk-IZ-2is" secondAttribute="top" constant="200" id="tD7-1o-I8N"/>
-                                    <constraint firstItem="HAb-g4-zpb" firstAttribute="top" secondItem="DLk-IZ-2is" secondAttribute="top" constant="700" id="uTH-kg-fEa"/>
+                                    <constraint firstItem="HAb-g4-zpb" firstAttribute="top" secondItem="DLk-IZ-2is" secondAttribute="top" constant="300" id="uTH-kg-fEa"/>
                                 </constraints>
                             </scrollView>
                         </subviews>

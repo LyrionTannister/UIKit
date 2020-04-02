@@ -14,12 +14,17 @@ class AllGroupsTableViewController: UITableViewController {
         super.viewDidLoad()
     }
 
-    let allGroups = [
-        "iOS",
-        "GeekBrains",
+    var allGroups = Group.init(groups:
+        ["iOS",
         "Swift",
-        "Mail.ru"
-    ]
+        "GeekBrains",
+        "Mail,ru",
+        "Tool",
+        "iPhone",
+        "Podcasts",
+        "TV Series",
+        "Movies",
+        "Radiohead"])
 
     // MARK: - Table view data source
 
@@ -28,13 +33,13 @@ class AllGroupsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allGroups.count
+        return allGroups.myGroups.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath) as! AllGroupsTableViewCell
 
-        let group = allGroups[indexPath.row]
+        let group = allGroups.myGroups[indexPath.row]
         cell.allGroupsLabel.text = group
         return cell
     }

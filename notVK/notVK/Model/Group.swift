@@ -9,5 +9,8 @@
 import Foundation
 
 struct Group {
-
+    lazy var myGroups = [String]()
+    init(groups: [String]) {
+        self.myGroups = groups
+    }
 }
