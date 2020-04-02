@@ -34,10 +34,10 @@ class AllGroupsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath) as! AllGroupsTableViewCell
 
         let group = allGroups[indexPath.row]
-        //cell.textLabel?.text = group
+        cell.allGroupsLabel.text = group
         return cell
     }
 

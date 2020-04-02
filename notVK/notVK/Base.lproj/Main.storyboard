@@ -334,6 +334,10 @@
                                         <constraint firstAttribute="bottom" secondItem="y2o-sw-as9" secondAttribute="bottom" constant="10" id="qcz-6y-oaA"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="myGroupLabel" destination="KZD-tD-E0x" id="btF-24-J5n"/>
+                                    <outlet property="myGroupPic" destination="y2o-sw-as9" id="LSU-x9-X8G"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -397,7 +401,7 @@
                                 <connections>
                                     <outlet property="allGroupsLabel" destination="APe-mF-hYm" id="KMo-sM-3VB"/>
                                     <outlet property="allGroupsPic" destination="yjx-2o-slr" id="wec-ci-nrt"/>
-                                    <segue destination="rAd-4a-ErZ" kind="unwind" unwindAction="addGroupUnwindActionWithUnwindSegue:" id="wDY-3t-F3j"/>
+                                    <segue destination="rAd-4a-ErZ" kind="unwind" identifier="addGroup" unwindAction="addGroupUnwindActionWithUnwindSegue:" id="nds-g0-i0N"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -29,9 +29,9 @@ class GroupsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath) as! GroupsViewCell
         let group = myGroups[indexPath.row]
-        cell.textLabel?.text = group
+        cell.myGroupLabel.text = group
         return cell
     }
 

@@ -80,8 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				0944FF0B2435F128001918FB /* AllGroupsTableViewController.swift */,
-				0944FF022435E4AE001918FB /* GroupsTableViewController.swift */,
 				0944FF092435F0FE001918FB /* AllGroupsTableViewCell.swift */,
+				0944FF022435E4AE001918FB /* GroupsTableViewController.swift */,
 				0944FF042435EA2C001918FB /* GroupsViewCell.swift */,
 			);
 			path = Groups;
