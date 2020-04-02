@@ -9,8 +9,7 @@
 import UIKit
 
 class FriendsCollectionViewController: UICollectionViewController {
-    let myFriends = [String]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -35,7 +34,7 @@ class FriendsCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return myFriends.count
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
