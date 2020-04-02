@@ -71,20 +71,15 @@ class LoginController: UIViewController {
     }
 
     func showErrorAlert() {
-        // Создаем контроллер
         let alert = UIAlertController(
             title: "Ошибка",
             message: "Введены неверные данные пользователя",
             preferredStyle: .alert)
-        // Создаем кнопку для UIAlertController
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        // Добавляем кнопку на UIAlertController
         alert.addAction(action)
-        // Показываем UIAlertController
         present(alert, animated: true)
     }
 
-    // swiftlint:disable force_cast
     @objc func keyboardWasShown(notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo as! [String: Any]
         let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
@@ -94,11 +89,10 @@ class LoginController: UIViewController {
     @objc func keyboardWillBeHidden(notification: Notification) {
         scrollBottomConstraint.constant = 0
     }
-    
+
     @objc func hideKeyboard() {
         self.loginScrollView.endEditing(true)
     }
-    // swiftlint:enable force_cast
 }
 
 

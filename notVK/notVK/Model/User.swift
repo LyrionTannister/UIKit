@@ -10,6 +10,7 @@ import Foundation
 
 struct User {
     lazy var friends = [String]()
+    var name: String = ""
     init(friends: [String]) {
         self.friends = friends
     }
