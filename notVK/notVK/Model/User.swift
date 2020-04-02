@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct User {
+    lazy var friends = [String]()
+    init(friends: [String]) {
+        self.friends = friends
+    }
+}

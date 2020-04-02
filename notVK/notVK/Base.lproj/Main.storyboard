@@ -101,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsCell" id="e7K-SH-NZn" customClass="GroupsViewCell" customModule="notVK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendsCell" id="e7K-SH-NZn" customClass="FriendsTableViewCell" customModule="notVK" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="70.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e7K-SH-NZn" id="FK1-6A-GRK">
@@ -132,6 +132,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="myFriendLabel" destination="wDV-UO-nk7" id="ESt-iQ-YRF"/>
+                                    <outlet property="myFriendPic" destination="Vd7-bV-hJ3" id="kR2-5U-w9B"/>
                                     <segue destination="amd-BM-m7o" kind="showDetail" id="Ez3-mU-zIR"/>
                                 </connections>
                             </tableViewCell>
