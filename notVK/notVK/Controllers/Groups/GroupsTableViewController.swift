@@ -32,7 +32,6 @@ class GroupsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath)
         let group = myGroups[indexPath.row]
         cell.textLabel?.text = group
-
         return cell
     }
 
