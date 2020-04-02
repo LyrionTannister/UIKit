@@ -12,8 +12,10 @@ class FriendsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var friendPhoto: UIImageView!
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let screenWidth = UIScreen.main.fixedCoordinateSpace.bounds.width
-//        return CGSize(width: screenWidth, height: friendPhoto.image?.size)
-//    }
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        layer.borderColor = UIColor.black.cgColor
+        layer.borderWidth = 1
+    }
 }
