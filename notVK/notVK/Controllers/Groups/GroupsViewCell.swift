@@ -9,7 +9,8 @@
 import UIKit
 
 class GroupsViewCell: UITableViewCell {
-        override func awakeFromNib() {
+    
+    override func awakeFromNib() {
         super.awakeFromNib()
     }
 

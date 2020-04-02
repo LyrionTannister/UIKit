@@ -364,10 +364,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllGroupsCell" id="Q3B-5q-8xN" customClass="GroupsViewCell" customModule="notVK">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllGroupsCell" id="Q3B-5q-8xN" customClass="AllGroupsTableViewCell" customModule="notVK" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="70.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q3B-5q-8xN" id="J39-4q-n2q">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q3B-5q-8xN" id="J39-4q-n2q" customClass="AllGroupsTableViewCell" customModule="notVK" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -395,6 +395,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="allGroupsLabel" destination="APe-mF-hYm" id="KMo-sM-3VB"/>
+                                    <outlet property="allGroupsPic" destination="yjx-2o-slr" id="wec-ci-nrt"/>
                                     <segue destination="rAd-4a-ErZ" kind="unwind" unwindAction="addGroupUnwindActionWithUnwindSegue:" id="wDY-3t-F3j"/>
                                 </connections>
                             </tableViewCell>

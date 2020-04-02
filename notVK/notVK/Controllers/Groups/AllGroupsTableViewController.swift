@@ -37,7 +37,7 @@ class AllGroupsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath)
 
         let group = allGroups[indexPath.row]
-        cell.textLabel?.text = group
+        //cell.textLabel?.text = group
         return cell
     }
 
