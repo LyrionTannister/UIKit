@@ -15,7 +15,6 @@
 		0944FF0F2435FC83001918FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF0E2435FC83001918FB /* User.swift */; };
 		0944FF122435FC93001918FB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF112435FC93001918FB /* Group.swift */; };
 		0944FF162436087A001918FB /* FriendsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF152436087A001918FB /* FriendsCollectionViewController.swift */; };
-		0944FF182436088A001918FB /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF172436088A001918FB /* FriendsCollectionViewCell.swift */; };
 		09997FCA2432B1E6003891DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09997FC92432B1E6003891DA /* AppDelegate.swift */; };
 		09997FCC2432B1E6003891DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09997FCB2432B1E6003891DA /* SceneDelegate.swift */; };
 		09997FCE2432B1E6003891DA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09997FCD2432B1E6003891DA /* LoginController.swift */; };
@@ -26,6 +25,8 @@
 		09A7D56924363098003B3881 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7D56824363098003B3881 /* FriendsTableViewCell.swift */; };
 		09A7D56C243686A5003B3881 /* ExtensionFriendsCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7D56B243686A5003B3881 /* ExtensionFriendsCollectionController.swift */; };
 		09EE39A2243813AC00E5326B /* LoginGradiend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A1243813AC00E5326B /* LoginGradiend.swift */; };
+		09EE39A6243820DC00E5326B /* RoundedPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A5243820DC00E5326B /* RoundedPhotos.swift */; };
+		09EE39A82438237D00E5326B /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A72438237C00E5326B /* FriendsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,6 @@
 		0944FF0E2435FC83001918FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0944FF112435FC93001918FB /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		0944FF152436087A001918FB /* FriendsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewController.swift; sourceTree = "<group>"; };
-		0944FF172436088A001918FB /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 		09997FC62432B1E6003891DA /* notVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09997FC92432B1E6003891DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09997FCB2432B1E6003891DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +50,8 @@
 		09A7D56824363098003B3881 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		09A7D56B243686A5003B3881 /* ExtensionFriendsCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFriendsCollectionController.swift; sourceTree = "<group>"; };
 		09EE39A1243813AC00E5326B /* LoginGradiend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGradiend.swift; sourceTree = "<group>"; };
+		09EE39A5243820DC00E5326B /* RoundedPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedPhotos.swift; sourceTree = "<group>"; };
+		09EE39A72438237C00E5326B /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +98,8 @@
 		0944FF142435FCFB001918FB /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				09EE39A72438237C00E5326B /* FriendsCollectionViewCell.swift */,
 				0944FF152436087A001918FB /* FriendsCollectionViewController.swift */,
-				0944FF172436088A001918FB /* FriendsCollectionViewCell.swift */,
 				09372F1E24337F31009388FA /* FriendsTableViewController.swift */,
 				09A7D56824363098003B3881 /* FriendsTableViewCell.swift */,
 			);
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				09EE39A1243813AC00E5326B /* LoginGradiend.swift */,
+				09EE39A5243820DC00E5326B /* RoundedPhotos.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				0944FF122435FC93001918FB /* Group.swift in Sources */,
 				09997FD42432B1E6003891DA /* notVK.xcdatamodeld in Sources */,
+				09EE39A82438237D00E5326B /* FriendsCollectionViewCell.swift in Sources */,
 				09A7D56C243686A5003B3881 /* ExtensionFriendsCollectionController.swift in Sources */,
 				09997FCE2432B1E6003891DA /* LoginController.swift in Sources */,
 				09A7D56924363098003B3881 /* FriendsTableViewCell.swift in Sources */,
@@ -237,10 +241,10 @@
 				0944FF162436087A001918FB /* FriendsCollectionViewController.swift in Sources */,
 				0944FF0C2435F128001918FB /* AllGroupsTableViewController.swift in Sources */,
 				0944FF052435EA2C001918FB /* GroupsViewCell.swift in Sources */,
+				09EE39A6243820DC00E5326B /* RoundedPhotos.swift in Sources */,
 				0944FF032435E4AE001918FB /* GroupsTableViewController.swift in Sources */,
 				0944FF0F2435FC83001918FB /* User.swift in Sources */,
 				0944FF0A2435F0FE001918FB /* AllGroupsTableViewCell.swift in Sources */,
-				0944FF182436088A001918FB /* FriendsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

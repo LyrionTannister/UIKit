@@ -334,32 +334,46 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="70.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y2o-sw-as9">
-                                            <rect key="frame" x="10" y="10" width="50" height="50.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="3K8-DI-HkH"/>
-                                                <constraint firstAttribute="height" constant="50" id="KOW-sg-NwW"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KZD-tD-E0x">
-                                            <rect key="frame" x="80" y="25" width="42" height="21"/>
+                                            <rect key="frame" x="30" y="25" width="314" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pst-Mo-ZOE" customClass="RoundedView" customModule="notVK" customModuleProvider="target">
+                                            <rect key="frame" x="354" y="10" width="50" height="50.5"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Groups" translatesAutoresizingMaskIntoConstraints="NO" id="y2o-sw-as9">
+                                                    <rect key="frame" x="0.0" y="0.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="3K8-DI-HkH"/>
+                                                        <constraint firstAttribute="height" constant="50" id="KOW-sg-NwW"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="y2o-sw-as9" firstAttribute="centerX" secondItem="Pst-Mo-ZOE" secondAttribute="centerX" id="4Lc-zy-Dul"/>
+                                                <constraint firstAttribute="height" constant="50" id="83O-M1-NSv"/>
+                                                <constraint firstItem="y2o-sw-as9" firstAttribute="centerY" secondItem="Pst-Mo-ZOE" secondAttribute="centerY" id="B5T-fA-9zv"/>
+                                                <constraint firstAttribute="width" constant="50" id="sOe-5T-QdB"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="y2o-sw-as9" firstAttribute="centerY" secondItem="v3M-ec-YWz" secondAttribute="centerY" id="Jm7-NZ-Xz2"/>
-                                        <constraint firstItem="KZD-tD-E0x" firstAttribute="centerY" secondItem="v3M-ec-YWz" secondAttribute="centerY" id="Kzh-zl-Cnq"/>
-                                        <constraint firstItem="KZD-tD-E0x" firstAttribute="leading" secondItem="y2o-sw-as9" secondAttribute="trailing" constant="20" id="Y6K-Ai-opR"/>
-                                        <constraint firstItem="y2o-sw-as9" firstAttribute="top" secondItem="v3M-ec-YWz" secondAttribute="top" constant="10" id="afv-gL-vcr"/>
-                                        <constraint firstItem="y2o-sw-as9" firstAttribute="leading" secondItem="v3M-ec-YWz" secondAttribute="leading" constant="10" id="cmI-5a-nlI"/>
-                                        <constraint firstAttribute="bottom" secondItem="y2o-sw-as9" secondAttribute="bottom" constant="10" id="qcz-6y-oaA"/>
+                                        <constraint firstAttribute="bottom" secondItem="Pst-Mo-ZOE" secondAttribute="bottom" constant="10" id="2kH-wh-LuX"/>
+                                        <constraint firstItem="Pst-Mo-ZOE" firstAttribute="top" secondItem="v3M-ec-YWz" secondAttribute="top" constant="10" id="bJA-un-K3d"/>
+                                        <constraint firstItem="Pst-Mo-ZOE" firstAttribute="centerY" secondItem="v3M-ec-YWz" secondAttribute="centerY" id="gCL-pQ-F8P"/>
+                                        <constraint firstItem="KZD-tD-E0x" firstAttribute="leading" secondItem="v3M-ec-YWz" secondAttribute="leadingMargin" constant="10" id="gse-eg-Ly6"/>
+                                        <constraint firstItem="Pst-Mo-ZOE" firstAttribute="leading" relation="lessThanOrEqual" secondItem="KZD-tD-E0x" secondAttribute="trailing" constant="10" id="jKc-8X-RZG"/>
+                                        <constraint firstItem="KZD-tD-E0x" firstAttribute="centerY" secondItem="v3M-ec-YWz" secondAttribute="centerY" id="zJL-lE-p7a"/>
+                                        <constraint firstAttribute="trailing" secondItem="Pst-Mo-ZOE" secondAttribute="trailing" constant="10" id="zRG-ez-Dvq"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="myGroupLabel" destination="KZD-tD-E0x" id="btF-24-J5n"/>
                                     <outlet property="myGroupPic" destination="y2o-sw-as9" id="LSU-x9-X8G"/>
+                                    <outlet property="roundedView" destination="Pst-Mo-ZOE" id="uiR-zb-C1b"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -372,7 +386,7 @@
                     <navigationItem key="navigationItem" title="Groups" id="c39-LS-Ch9">
                         <barButtonItem key="rightBarButtonItem" image="plus.square.fill" catalog="system" id="S7l-h0-81c">
                             <connections>
-                                <segue destination="lRO-Vf-A2F" kind="presentation" id="kiI-Fp-70Z"/>
+                                <segue destination="lRO-Vf-A2F" kind="show" id="kiI-Fp-70Z"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -387,7 +401,7 @@
             <objects>
                 <tableViewController id="lRO-Vf-A2F" customClass="AllGroupsTableViewController" customModule="notVK" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jgr-XI-XXL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -459,6 +473,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Groups" width="200" height="200"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <image name="person.crop.circle.fill.badge.plus" catalog="system" width="128" height="101"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
