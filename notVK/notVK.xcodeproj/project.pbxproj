@@ -25,6 +25,7 @@
 		09997FD92432B1ED003891DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09997FD72432B1ED003891DA /* LaunchScreen.storyboard */; };
 		09A7D56924363098003B3881 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7D56824363098003B3881 /* FriendsTableViewCell.swift */; };
 		09A7D56C243686A5003B3881 /* ExtensionFriendsCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7D56B243686A5003B3881 /* ExtensionFriendsCollectionController.swift */; };
+		09EE39A2243813AC00E5326B /* LoginGradiend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A1243813AC00E5326B /* LoginGradiend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		09997FDA2432B1ED003891DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A7D56824363098003B3881 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		09A7D56B243686A5003B3881 /* ExtensionFriendsCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFriendsCollectionController.swift; sourceTree = "<group>"; };
+		09EE39A1243813AC00E5326B /* LoginGradiend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGradiend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		09997FC82432B1E6003891DA /* notVK */ = {
 			isa = PBXGroup;
 			children = (
+				09EE39A02438138000E5326B /* ui */,
 				09A7D56A24368676003B3881 /* Extensions */,
 				0944FF0D2435FC67001918FB /* Model */,
 				09372F2024337FAB009388FA /* Controllers */,
@@ -141,6 +144,14 @@
 				09A7D56B243686A5003B3881 /* ExtensionFriendsCollectionController.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		09EE39A02438138000E5326B /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				09EE39A1243813AC00E5326B /* LoginGradiend.swift */,
+			);
+			path = ui;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				09A7D56C243686A5003B3881 /* ExtensionFriendsCollectionController.swift in Sources */,
 				09997FCE2432B1E6003891DA /* LoginController.swift in Sources */,
 				09A7D56924363098003B3881 /* FriendsTableViewCell.swift in Sources */,
+				09EE39A2243813AC00E5326B /* LoginGradiend.swift in Sources */,
 				09997FCA2432B1E6003891DA /* AppDelegate.swift in Sources */,
 				09997FCC2432B1E6003891DA /* SceneDelegate.swift in Sources */,
 				09372F1F24337F31009388FA /* FriendsTableViewController.swift in Sources */,
