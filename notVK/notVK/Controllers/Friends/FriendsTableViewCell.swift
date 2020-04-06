@@ -10,8 +10,20 @@ import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var friendView: DropShadow! {
+        didSet {
+            friendView.layer.cornerRadius = 25
+        }
+    }
+    @IBOutlet weak var friendPic: UIImageView! {
+        didSet {
+            friendPic.layer.cornerRadius = 25
+            friendPic.layer.masksToBounds = true
+            
+            friendPic.layer.shouldRasterize = true
+        }
+    }
     @IBOutlet weak var myFriendLabel: UILabel!
-    @IBOutlet weak var myFriendPic: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

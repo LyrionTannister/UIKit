@@ -9,9 +9,22 @@
 import UIKit
 
 class GroupsViewCell: UITableViewCell {
-    
+
     @IBOutlet weak var myGroupLabel: UILabel!
-    @IBOutlet weak var myGroupPic: UIImageView!
+    @IBOutlet weak var myGroupPic: UIImageView!{
+        didSet {
+            myGroupPic.layer.cornerRadius = 25
+            myGroupPic.layer.masksToBounds = true
+            
+            myGroupPic.layer.shouldRasterize = true
+        }
+    }
+    @IBOutlet weak var roundedView: UIView! {
+        didSet {
+            roundedView.layer.cornerRadius = 25
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }
