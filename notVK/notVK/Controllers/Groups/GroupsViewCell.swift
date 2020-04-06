@@ -21,6 +21,7 @@ class GroupsViewCell: UITableViewCell {
     }
     @IBOutlet weak var roundedView: UIView! {
         didSet {
+// MARK: - Можно ли вынести это своство в класс DropShadow? У меня не получилось.
             roundedView.layer.cornerRadius = 25
         }
     }
