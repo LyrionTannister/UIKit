@@ -10,10 +10,20 @@ import UIKit
 
 class AllGroupsTableViewCell: UITableViewCell {
 
-
-
     @IBOutlet weak var allGroupsLabel: UILabel!
-    @IBOutlet weak var allGroupsPic: UIImageView!
+    @IBOutlet weak var allGroupsPic: UIImageView!{
+        didSet {
+            allGroupsPic.layer.cornerRadius = 25
+            allGroupsPic.layer.masksToBounds = true
+            
+            allGroupsPic.layer.shouldRasterize = true
+        }
+    }
+    @IBOutlet weak var dropShadowLayer: DropShadow! {
+        didSet {
+            dropShadowLayer.layer.cornerRadius = 25
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
