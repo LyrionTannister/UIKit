@@ -24,8 +24,10 @@
 		09997FD92432B1ED003891DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09997FD72432B1ED003891DA /* LaunchScreen.storyboard */; };
 		09A7D56924363098003B3881 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7D56824363098003B3881 /* FriendsTableViewCell.swift */; };
 		09A7D56C243686A5003B3881 /* ExtensionFriendsCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7D56B243686A5003B3881 /* ExtensionFriendsCollectionController.swift */; };
+		09A879DD243A6CF900FF7C06 /* FindFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A879DC243A6CF900FF7C06 /* FindFriendsTableViewController.swift */; };
+		09A879DF243A76FC00FF7C06 /* FindFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A879DE243A76FC00FF7C06 /* FindFriendsTableViewCell.swift */; };
 		09EE39A2243813AC00E5326B /* LoginGradiend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A1243813AC00E5326B /* LoginGradiend.swift */; };
-		09EE39A6243820DC00E5326B /* RoundedPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A5243820DC00E5326B /* RoundedPhotos.swift */; };
+		09EE39A6243820DC00E5326B /* DropShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A5243820DC00E5326B /* DropShadow.swift */; };
 		09EE39A82438237D00E5326B /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A72438237C00E5326B /* FriendsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +51,10 @@
 		09997FDA2432B1ED003891DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A7D56824363098003B3881 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		09A7D56B243686A5003B3881 /* ExtensionFriendsCollectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFriendsCollectionController.swift; sourceTree = "<group>"; };
+		09A879DC243A6CF900FF7C06 /* FindFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsTableViewController.swift; sourceTree = "<group>"; };
+		09A879DE243A76FC00FF7C06 /* FindFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		09EE39A1243813AC00E5326B /* LoginGradiend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGradiend.swift; sourceTree = "<group>"; };
-		09EE39A5243820DC00E5326B /* RoundedPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedPhotos.swift; sourceTree = "<group>"; };
+		09EE39A5243820DC00E5326B /* DropShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropShadow.swift; sourceTree = "<group>"; };
 		09EE39A72438237C00E5326B /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,8 @@
 				0944FF152436087A001918FB /* FriendsCollectionViewController.swift */,
 				09372F1E24337F31009388FA /* FriendsTableViewController.swift */,
 				09A7D56824363098003B3881 /* FriendsTableViewCell.swift */,
+				09A879DC243A6CF900FF7C06 /* FindFriendsTableViewController.swift */,
+				09A879DE243A76FC00FF7C06 /* FindFriendsTableViewCell.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -125,15 +131,13 @@
 		09997FC82432B1E6003891DA /* notVK */ = {
 			isa = PBXGroup;
 			children = (
-				09EE39A02438138000E5326B /* ui */,
+				09EDD0352439680300B8DAF6 /* Storyboards */,
+				09EDD034243967CF00B8DAF6 /* Delegates */,
 				09A7D56A24368676003B3881 /* Extensions */,
 				0944FF0D2435FC67001918FB /* Model */,
 				09372F2024337FAB009388FA /* Controllers */,
-				09997FC92432B1E6003891DA /* AppDelegate.swift */,
-				09997FCB2432B1E6003891DA /* SceneDelegate.swift */,
-				09997FCF2432B1E6003891DA /* Main.storyboard */,
+				09EE39A02438138000E5326B /* ui */,
 				09997FD52432B1ED003891DA /* Assets.xcassets */,
-				09997FD72432B1ED003891DA /* LaunchScreen.storyboard */,
 				09997FDA2432B1ED003891DA /* Info.plist */,
 				09997FD22432B1E6003891DA /* notVK.xcdatamodeld */,
 			);
@@ -148,11 +152,29 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		09EDD034243967CF00B8DAF6 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				09997FC92432B1E6003891DA /* AppDelegate.swift */,
+				09997FCB2432B1E6003891DA /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		09EDD0352439680300B8DAF6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				09997FCF2432B1E6003891DA /* Main.storyboard */,
+				09997FD72432B1ED003891DA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		09EE39A02438138000E5326B /* ui */ = {
 			isa = PBXGroup;
 			children = (
 				09EE39A1243813AC00E5326B /* LoginGradiend.swift */,
-				09EE39A5243820DC00E5326B /* RoundedPhotos.swift */,
+				09EE39A5243820DC00E5326B /* DropShadow.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -230,8 +252,10 @@
 			files = (
 				0944FF122435FC93001918FB /* Group.swift in Sources */,
 				09997FD42432B1E6003891DA /* notVK.xcdatamodeld in Sources */,
+				09A879DF243A76FC00FF7C06 /* FindFriendsTableViewCell.swift in Sources */,
 				09EE39A82438237D00E5326B /* FriendsCollectionViewCell.swift in Sources */,
 				09A7D56C243686A5003B3881 /* ExtensionFriendsCollectionController.swift in Sources */,
+				09A879DD243A6CF900FF7C06 /* FindFriendsTableViewController.swift in Sources */,
 				09997FCE2432B1E6003891DA /* LoginController.swift in Sources */,
 				09A7D56924363098003B3881 /* FriendsTableViewCell.swift in Sources */,
 				09EE39A2243813AC00E5326B /* LoginGradiend.swift in Sources */,
@@ -241,7 +265,7 @@
 				0944FF162436087A001918FB /* FriendsCollectionViewController.swift in Sources */,
 				0944FF0C2435F128001918FB /* AllGroupsTableViewController.swift in Sources */,
 				0944FF052435EA2C001918FB /* GroupsViewCell.swift in Sources */,
-				09EE39A6243820DC00E5326B /* RoundedPhotos.swift in Sources */,
+				09EE39A6243820DC00E5326B /* DropShadow.swift in Sources */,
 				0944FF032435E4AE001918FB /* GroupsTableViewController.swift in Sources */,
 				0944FF0F2435FC83001918FB /* User.swift in Sources */,
 				0944FF0A2435F0FE001918FB /* AllGroupsTableViewCell.swift in Sources */,
