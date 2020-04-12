@@ -15,14 +15,14 @@
 		0944FF0F2435FC83001918FB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF0E2435FC83001918FB /* User.swift */; };
 		0944FF122435FC93001918FB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF112435FC93001918FB /* Group.swift */; };
 		0944FF162436087A001918FB /* FriendsColVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF152436087A001918FB /* FriendsColVC.swift */; };
-		09805C442440631700926BF9 /* LoginScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09805C422440631700926BF9 /* LoginScreen.storyboard */; };
+		09805C442440631700926BF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09805C422440631700926BF9 /* Main.storyboard */; };
 		09805C47244063E300926BF9 /* Groups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09805C46244063E300926BF9 /* Groups.storyboard */; };
 		09805C4B2441F4D500926BF9 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09805C4A2441F4D500926BF9 /* Friends.storyboard */; };
 		09805C522442194B00926BF9 /* ImageRoundedShadowed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09805C512442194B00926BF9 /* ImageRoundedShadowed.swift */; };
 		09997FCA2432B1E6003891DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09997FC92432B1E6003891DA /* AppDelegate.swift */; };
 		09997FCC2432B1E6003891DA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09997FCB2432B1E6003891DA /* SceneDelegate.swift */; };
 		09997FCE2432B1E6003891DA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09997FCD2432B1E6003891DA /* LoginController.swift */; };
-		09997FD12432B1E6003891DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09997FCF2432B1E6003891DA /* Main.storyboard */; };
+		09997FD12432B1E6003891DA /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09997FCF2432B1E6003891DA /* MainScreen.storyboard */; };
 		09997FD42432B1E6003891DA /* notVK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09997FD22432B1E6003891DA /* notVK.xcdatamodeld */; };
 		09997FD62432B1ED003891DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09997FD52432B1ED003891DA /* Assets.xcassets */; };
 		09997FD92432B1ED003891DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09997FD72432B1ED003891DA /* LaunchScreen.storyboard */; };
@@ -44,7 +44,7 @@
 		0944FF0E2435FC83001918FB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0944FF112435FC93001918FB /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		0944FF152436087A001918FB /* FriendsColVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsColVC.swift; sourceTree = "<group>"; };
-		09805C432440631700926BF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = notVK/Storyboards/Base.lproj/LoginScreen.storyboard; sourceTree = "<group>"; };
+		09805C432440631700926BF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = notVK/Storyboards/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09805C46244063E300926BF9 /* Groups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Groups.storyboard; sourceTree = "<group>"; };
 		09805C4A2441F4D500926BF9 /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		09805C512442194B00926BF9 /* ImageRoundedShadowed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRoundedShadowed.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		09997FC92432B1E6003891DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09997FCB2432B1E6003891DA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		09997FCD2432B1E6003891DA /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		09997FD02432B1E6003891DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09997FD02432B1E6003891DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainScreen.storyboard; sourceTree = "<group>"; };
 		09997FD32432B1E6003891DA /* notVK.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = notVK.xcdatamodel; sourceTree = "<group>"; };
 		09997FD52432B1ED003891DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09997FD82432B1ED003891DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,9 +100,8 @@
 		09805C452440638400926BF9 /* Login Screen */ = {
 			isa = PBXGroup;
 			children = (
-				0944FF142435FCFB001918FB /* Friends */,
 				09805C492440643F00926BF9 /* ui */,
-				09805C422440631700926BF9 /* LoginScreen.storyboard */,
+				09805C422440631700926BF9 /* Main.storyboard */,
 				09997FCD2432B1E6003891DA /* LoginController.swift */,
 			);
 			path = "Login Screen";
@@ -192,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				09EDD034243967CF00B8DAF6 /* Delegates */,
+				0944FF142435FCFB001918FB /* Friends */,
 				09805C48244063F600926BF9 /* Groups */,
 				0944FF0D2435FC67001918FB /* Model */,
 				09805C452440638400926BF9 /* Login Screen */,
@@ -224,7 +224,7 @@
 		09EDD0352439680300B8DAF6 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				09997FCF2432B1E6003891DA /* Main.storyboard */,
+				09997FCF2432B1E6003891DA /* MainScreen.storyboard */,
 				09997FD72432B1ED003891DA /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -301,8 +301,8 @@
 				09805C47244063E300926BF9 /* Groups.storyboard in Resources */,
 				09997FD92432B1ED003891DA /* LaunchScreen.storyboard in Resources */,
 				09997FD62432B1ED003891DA /* Assets.xcassets in Resources */,
-				09805C442440631700926BF9 /* LoginScreen.storyboard in Resources */,
-				09997FD12432B1E6003891DA /* Main.storyboard in Resources */,
+				09805C442440631700926BF9 /* Main.storyboard in Resources */,
+				09997FD12432B1E6003891DA /* MainScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,20 +339,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		09805C422440631700926BF9 /* LoginScreen.storyboard */ = {
+		09805C422440631700926BF9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				09805C432440631700926BF9 /* Base */,
 			);
-			name = LoginScreen.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		09997FCF2432B1E6003891DA /* Main.storyboard */ = {
+		09997FCF2432B1E6003891DA /* MainScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				09997FD02432B1E6003891DA /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainScreen.storyboard;
 			sourceTree = "<group>";
 		};
 		09997FD72432B1ED003891DA /* LaunchScreen.storyboard */ = {

@@ -9,7 +9,9 @@
 import UIKit
 
 class FriendsTableViewController: UITableViewController {
-    var friends = User.init(friends: ["Max","Igor","Ira"])
+    var myFfriends = User.init(friends: ["Alexander Chernykh",
+                                      "Evgeny Elchev",
+                                      "Vladislav Likhachev"])
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,13 +28,16 @@ class FriendsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friends.friends.count
+        return myFfriends.friends.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendsCell", for: indexPath) as! FriendsTableViewCell
 
-        cell.myFriendLabel.text = friends.friends[indexPath.row]
+        cell.myFriendLabel.text = myFfriends.friends[indexPath.row]
+
+        cell.shadowLayer.image
+            .image = UIImage(named: myFfriends.friends[indexPath.row])
 
         return cell
     }
