@@ -100,7 +100,7 @@
 		09805C452440638400926BF9 /* Login Screen */ = {
 			isa = PBXGroup;
 			children = (
-				09805C492440643F00926BF9 /* ui */,
+				09805C492440643F00926BF9 /* UI */,
 				09805C422440631700926BF9 /* Main.storyboard */,
 				09997FCD2432B1E6003891DA /* LoginController.swift */,
 			);
@@ -117,12 +117,12 @@
 			path = Groups;
 			sourceTree = "<group>";
 		};
-		09805C492440643F00926BF9 /* ui */ = {
+		09805C492440643F00926BF9 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				09EE39A1243813AC00E5326B /* LoginGradiend.swift */,
 			);
-			path = ui;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		09805C4C2441F94500926BF9 /* FriendsColVC */ = {
