@@ -15,7 +15,7 @@ class Group: Comparable {
         case openGroup
         case onlyForRegistered
         case privateGroup
-
+        
         var description: String {
             switch self {
             case .openGroup:
