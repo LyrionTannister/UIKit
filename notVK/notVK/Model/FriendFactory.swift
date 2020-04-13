@@ -1,0 +1,86 @@
+//
+//  friendFactory.swift
+//  notVK
+//
+//  Created by Roman on 13.04.2020.
+//  Copyright © 2020 DrewMyScreen. All rights reserved.
+//
+
+import UIKit
+
+class  FriendFactory  {
+    static func makeFriends () -> [User] {
+        return [
+            User(sex: User.Sex.male,
+                 firstName: "Богдан",
+                 lastName: "Титомир",
+                 age: 65,
+                 city: "Питер",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+            User(sex: User.Sex.male,
+                 firstName: "Тупак",
+                 lastName: "Шакур",
+                 age: 14,
+                 city: "Каракум",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+            User(sex: User.Sex.male,
+                 firstName: "Tim",
+                 lastName: "Cook",
+                 age: 55,
+                 city: "San-Francisco",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+            User(sex: User.Sex.male,
+                 firstName: "Tim",
+                 lastName: "Cook",
+                 age: 55,
+                 city: "San-Francisco",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+            User(sex: User.Sex.male,
+                 firstName: "Tim",
+                 lastName: "Cook",
+                 age: 55,
+                 city: "San-Francisco",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+            User(sex: User.Sex.male,
+                 firstName: "Tim",
+                 lastName: "Cook",
+                 age: 55,
+                 city: "San-Francisco",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+            User(sex: User.Sex.male,
+                 firstName: "Tim",
+                 lastName: "Cook",
+                 age: 55,
+                 city: "San-Francisco",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+            User(sex: User.Sex.male,
+                 firstName: "Толя",
+                 lastName: "Чубайс",
+                 age: 58,
+                 city: "Москва",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+            User(sex: User.Sex.female,
+                 firstName: "Оля",
+                 lastName: "Петина",
+                 age: 29,
+                 city: "Экибастуз",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+            User(sex: User.Sex.male,
+                 firstName: "Taras",
+                 lastName: "Bulba",
+                 age: 33,
+                 city: "Zaporizh'e",
+                 fotoPath: "FriendIcon",
+                 onLineState:  false),
+        ]
+    }
+}

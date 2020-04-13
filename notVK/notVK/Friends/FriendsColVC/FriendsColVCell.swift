@@ -11,11 +11,11 @@ import UIKit
 class FriendsCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var friendPhoto: UIImageView!
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         
         layer.borderColor = UIColor.black.cgColor
-        layer.borderWidth = 1
+        layer.borderWidth = 0
     }
 }

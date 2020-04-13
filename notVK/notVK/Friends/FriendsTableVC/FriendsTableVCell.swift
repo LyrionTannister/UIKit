@@ -10,7 +10,6 @@ import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var friendFoto: UIImageView!
     @IBOutlet weak var shadowLayer: ImageRoundedShadowed!
     @IBOutlet weak var myFriendLabel: UILabel!
 

@@ -10,11 +10,11 @@ import UIKit
 
 class AllGroupsTableViewController: UITableViewController {
     let allGroups: [Group] = [
-        Group(name: "E-squire", count: 100000,
+        Group(name: "iOS", count: 1024,
               groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK"),
-        Group(name: "E-squire", count: 100000, groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK"),
-        Group(name: "Snob", count: 30000, groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK"),
-        Group(name: "Фобошная и Кофешная", count: 25000, groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK")
+        Group(name: "GeekBrains", count: 543, groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK"),
+        Group(name: "Apple", count: 335654, groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK"),
+        Group(name: "Сплат", count: 1234, groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK")
     ]
 
     override func viewDidLoad() {
