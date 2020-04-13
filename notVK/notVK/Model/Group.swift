@@ -8,9 +8,47 @@
 
 import Foundation
 
-struct Group {
-    lazy var myGroups = [String]()
-    init(groups: [String]) {
-        self.myGroups = groups
+class Group: Comparable {
+
+    enum GroupType: CustomStringConvertible {
+
+        case openGroup
+        case onlyForRegistered
+        case privateGroup
+
+        var description: String {
+            switch self {
+            case .openGroup:
+                return "Открытое сообщество"
+            case .onlyForRegistered:
+                return "Только для зарегистрированных"
+            case .privateGroup:
+                return "Частное сообщество"
+            }
+        }
+    }
+
+    let name: String
+    var count: Int
+    let groupType: GroupType
+    var fotoPath: String
+
+    init(name: String, count: Int, groupType: GroupType, fotoPath: String) {
+        self.name = name
+        self.count = count
+        self.groupType = groupType
+        self.fotoPath = fotoPath
+    }
+
+    static func == (lhs: Group, rhs: Group) -> Bool {
+        return lhs.name == rhs.name
+    }
+
+    static func < (lhs: Group, rhs: Group) -> Bool {
+        return lhs.name < rhs.name
+    }
+
+    static func > (lhs: Group, rhs: Group) -> Bool {
+        return lhs.name > rhs.name
     }
 }

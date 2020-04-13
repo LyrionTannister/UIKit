@@ -1,17 +1,14 @@
 //
-//  FriendsTableViewCell.swift
+//  FindFriendsTableViewCell.swift
 //  notVK
 //
-//  Created by Roman on 02.04.2020.
+//  Created by Roman on 05.04.2020.
 //  Copyright © 2020 DrewMyScreen. All rights reserved.
 //
 
 import UIKit
 
-class FriendsTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var myFriendLabel: UILabel!
-    @IBOutlet weak var myFriendPic: UIImageView!
+class FindFriendsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,6 +12,12 @@ class FriendsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let layout = collectionView
+            .collectionViewLayout as? UICollectionViewFlowLayout
+
+        layout?.minimumInteritemSpacing = 0
+        layout?.minimumLineSpacing = 0
     }
 
     // MARK: - Navigation
@@ -28,6 +34,8 @@ class FriendsCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "friendPhotoCell", for: indexPath) as! FriendsCollectionViewCell
+        let photoName = "photo" + String(indexPath.item + 1)
+        cell.friendPhoto.image = UIImage(named: photoName)
         return cell
     }
 
