@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+// Friend factory
 class Group: Comparable {
 
     enum GroupType: CustomStringConvertible {
