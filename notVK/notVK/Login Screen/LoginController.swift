@@ -18,10 +18,18 @@ class LoginController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginScrollView: UIScrollView!
     
-    let notificationCenter = NotificationCenter.default
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var leftLoadingDot: Dots!
+    @IBOutlet weak var centerLoadingDot: Dots!
+    @IBOutlet weak var rightLoadingDot: Dots!
+    
+    
 
+    let notificationCenter = NotificationCenter.default
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        animateLoadingDots()
 
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         loginScrollView?.addGestureRecognizer(hideKeyboardGesture)
@@ -92,6 +100,13 @@ class LoginController: UIViewController {
 
     @objc func hideKeyboard() {
         self.loginScrollView.endEditing(true)
+    }
+    
+    func animateLoadingDots() {
+        UIView.animate(withDuration: 1, delay: 0, options: [.repeat, .autoreverse], animations: { self.leftLoadingDot.alpha = 0 })
+        UIView.animate(withDuration: 1, delay: 0.333, options: [.repeat, .autoreverse], animations: { self.centerLoadingDot.alpha = 0 })
+        UIView.animate(withDuration: 1, delay: 0.666, options: [.repeat, .autoreverse], animations: { self.rightLoadingDot.alpha = 0 })
+
     }
 }
 
