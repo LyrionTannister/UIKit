@@ -11,10 +11,10 @@ import UIKit
 class AllGroupsTableViewController: UITableViewController {
     let allGroups: [Group] = [
         Group(name: "iOS", count: 1024,
-              groupType: Group.GroupType.openGroup, fotoPath: "iconiOS"),
-        Group(name: "GeekBrains", count: 543, groupType: Group.GroupType.openGroup, fotoPath: "iconGeekBrains"),
-        Group(name: "Apple", count: 335654, groupType: Group.GroupType.openGroup, fotoPath: "iconApple"),
-        Group(name: "Сплат", count: 1234, groupType: Group.GroupType.openGroup, fotoPath: "iconSplat")
+              groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK"),
+        Group(name: "GeekBrains", count: 543, groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK"),
+        Group(name: "Apple", count: 335654, groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK"),
+        Group(name: "Сплат", count: 1234, groupType: Group.GroupType.openGroup, fotoPath: "iconGroupVK")
     ]
 
     override func viewDidLoad() {
@@ -35,7 +35,7 @@ class AllGroupsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath) as! AllGroupsTableViewCell
 
         let group = allGroups[indexPath.row]
-        cell.friendName.text = group.name
+        cell.allGroupsLabel.text = group.name
         return cell
     }
 
