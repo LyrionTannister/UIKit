@@ -17,22 +17,30 @@ class FriendsTableViewController: UITableViewController {
 
     var allMyFriends = FriendFactory.makeFriends()
     var friendsSection = [Section<User>]()
-
+    
+    var friendsDictionary = [Character:[User]]()
+    var firstLetters: [Character] {
+        get {
+            friendsDictionary.keys.sorted()
+        }
+    }
 
     @IBOutlet weak var searchMyFriend: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        friendsDictionary = self.getSortedUsers(searchText: nil)
+        
     // MARK: - Table view properties
 
         self.clearsSelectionOnViewWillAppear = false
         self.navigationItem.rightBarButtonItem = self.editButtonItem
 
-        let friendsDictionary = Dictionary.init(grouping: allMyFriends) {
-            $0.firstName.prefix(1)
+        let friendsFinder = Dictionary.init(grouping: allMyFriends) {
+            $0.lastName.prefix(1)
         }
 
-        friendsSection = friendsDictionary.map {Section(title: String($0.key), items: $0.value)}
+        friendsSection = friendsFinder.map {Section(title: String($0.key), items: $0.value)}
 
         friendsSection.sort {$0.title < $1.title}
         
@@ -60,6 +68,12 @@ class FriendsTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let viewForHeaderInSection = CustomSectionDesign()
+        viewForHeaderInSection.label.text = String(firstLetters[section].uppercased())
+        return viewForHeaderInSection
+    }
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return friendsSection[section].title
     }
@@ -67,5 +81,16 @@ class FriendsTableViewController: UITableViewController {
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return friendsSection.map {$0.title}
     }
-
+    
+    func getSortedUsers(searchText: String?) -> [Character:[User]]{
+        var tempUsers: [User]
+        if let text = searchText?.lowercased(), searchText != "" {
+            tempUsers = allMyFriends.filter{ $0.lastName.lowercased().contains(text)}
+        } else {
+            tempUsers = allMyFriends
+        }
+        let sortedUsers = Dictionary.init(grouping: tempUsers) { $0.lastName.lowercased().first! }
+            .mapValues{ $0.sorted{ $0.lastName.lowercased() < $1.lastName.lowercased() } }
+        return sortedUsers
+    }
 }

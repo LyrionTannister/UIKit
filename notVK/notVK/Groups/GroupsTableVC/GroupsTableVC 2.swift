@@ -31,7 +31,6 @@ class GroupsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath) as! GroupsViewCell
         let group = myGroups[indexPath.row]
-        cell.imageRoundedShadowed.image.image = UIImage(named: group.name)
         cell.myGroupLabel.text = group.name
         return cell
     }
