@@ -37,7 +37,7 @@ class CustomSectionDesign: UIView {
         
         addSubview(label)
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.layer.cornerRadius = 15
+        label.layer.cornerRadius = 10
         label.clipsToBounds = true
         label.textAlignment = .center
         label.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
