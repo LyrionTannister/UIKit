@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+@IBDesignable
 class ImageRoundedShadowed: UIView {
     public var image: UIImageView!
 
@@ -32,9 +32,9 @@ class ImageRoundedShadowed: UIView {
 
         layer.backgroundColor = UIColor.clear.cgColor
     // MARK: - Shadow layer properties
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 1.0
-        layer.shadowRadius = 4
+        layer.shadowColor = UIColor.black.cgColor //устанавливаем цвет
+        layer.shadowOpacity = 1.0 //устанавливаем прозрачность
+        layer.shadowRadius = 4 //устанавоиваем радиус тени
         layer.shadowOffset = CGSize(width: 0, height: 1)
     // MARK: - Image layer properties
         image.layer.cornerRadius = bounds.size.height / 2

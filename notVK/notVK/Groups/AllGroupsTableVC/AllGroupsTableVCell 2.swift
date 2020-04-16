@@ -1,5 +1,5 @@
 //
-//  GroupsViewCell.swift
+//  AllGroupsTableViewCell.swift
 //  notVK
 //
 //  Created by Roman on 02.04.2020.
@@ -8,10 +8,9 @@
 
 import UIKit
 
-class GroupsViewCell: UITableViewCell {
+class AllGroupsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var myGroupLabel: UILabel!
-    @IBOutlet weak var imageRoundedShadowed: ImageRoundedShadowed!
+    @IBOutlet weak var allGroupsLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
