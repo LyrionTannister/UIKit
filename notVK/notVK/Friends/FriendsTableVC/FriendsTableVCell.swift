@@ -43,7 +43,7 @@ class FriendsTableViewCell: UITableViewCell {
                        initialSpringVelocity: 0,
                        options: [],
                        animations: {
-                        self.myFriendLabel.transform = CGAffineTransform(translationX: -self.frame.width / 10, y: -self.myFriendLabel.frame.height)
+                        self.myFriendLabel.transform = CGAffineTransform(translationX: -self.myFriendLabel.frame.width, y: 0)
         }, completion: { (isComplete) in
             UIView.animate(withDuration: 0.9, animations: {
                 self.myFriendLabel.transform = .identity
