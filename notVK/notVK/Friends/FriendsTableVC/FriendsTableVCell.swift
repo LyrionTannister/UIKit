@@ -25,14 +25,30 @@ class FriendsTableViewCell: UITableViewCell {
     }
 
     @objc func tapOn(_ tapGestureRecognizer: UITapGestureRecognizer) {
-        UIView.animate(withDuration: 3,
+        UIView.animate(withDuration: 1,
                        delay: 0,
-                       usingSpringWithDamping: 0.3,
+                       usingSpringWithDamping: 0.1,
                        initialSpringVelocity: 0,
-                       options: [.repeat,.autoreverse],
+                       options: [],
                        animations: {
-                        self.shadowLayer.transform = CGAffineTransform(scaleX: -self.shadowLayer.bounds.width / 2, y: -self.shadowLayer.bounds.height / 2)
+                        self.shadowLayer.transform = CGAffineTransform(scaleX: -self.shadowLayer.frame.width / 15, y: -self.shadowLayer.frame.height / 15)
+        }, completion: { (isComplete) in
+            UIView.animate(withDuration: 0.9, animations: {
+                self.shadowLayer.transform = .identity
+            })
+        })
+        UIView.animate(withDuration: 1,
+                       delay: 0,
+                       usingSpringWithDamping: 0.8,
+                       initialSpringVelocity: 0,
+                       options: [],
+                       animations: {
+                        self.myFriendLabel.transform = CGAffineTransform(translationX: -self.frame.width / 10, y: -self.myFriendLabel.frame.height)
+        }, completion: { (isComplete) in
+            UIView.animate(withDuration: 0.9, animations: {
+                self.myFriendLabel.transform = .identity
+            })
         })
     }
-
+    
 }
