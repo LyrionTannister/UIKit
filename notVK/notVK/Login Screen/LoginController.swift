@@ -103,9 +103,145 @@ class LoginController: UIViewController {
     }
     
     func animateLoadingDots() {
-        UIView.animate(withDuration: 1, delay: 0, options: [.repeat, .autoreverse], animations: { self.leftLoadingDot.alpha = 0 })
-        UIView.animate(withDuration: 1, delay: 0.333, options: [.repeat, .autoreverse], animations: { self.centerLoadingDot.alpha = 0 })
-        UIView.animate(withDuration: 1, delay: 0.666, options: [.repeat, .autoreverse], animations: { self.rightLoadingDot.alpha = 0 })
+        UIView.animateKeyframes(withDuration: 1,
+                                delay: 0,
+                                options: [.repeat, .autoreverse],
+                                animations: {
+                                    UIView.addKeyframe(withRelativeStartTime: 0,
+                                                       relativeDuration: 0.4,
+                                                       animations: {
+                                                        self.leftLoadingDot.alpha = 0.5
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.4,
+                                                       relativeDuration: 0.03,
+                                                       animations: {
+                                                        self.leftLoadingDot.alpha = 1
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.44,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.leftLoadingDot.alpha = 0
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.48,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.leftLoadingDot.alpha = 1
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.52,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.leftLoadingDot.alpha = 0
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.56,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.leftLoadingDot.alpha = 1
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.60,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.leftLoadingDot.alpha = 0.5
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.6,
+                                                       relativeDuration: 0.25,
+                                                       animations: {
+                                                        self.leftLoadingDot.alpha = 0
+                                    })
+        })
+        UIView.animateKeyframes(withDuration: 1,
+                                delay: 0.333,
+                                options: [.repeat, .autoreverse],
+                                animations: {
+                                    UIView.addKeyframe(withRelativeStartTime: 0,
+                                                       relativeDuration: 0.4,
+                                                       animations: {
+                                                        self.centerLoadingDot.alpha = 0.5
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.4,
+                                                       relativeDuration: 0.03,
+                                                       animations: {
+                                                        self.centerLoadingDot.alpha = 1
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.44,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.centerLoadingDot.alpha = 0
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.48,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.centerLoadingDot.alpha = 1
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.52,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.centerLoadingDot.alpha = 0
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.56,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.centerLoadingDot.alpha = 1
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.60,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.centerLoadingDot.alpha = 0.5
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.6,
+                                                       relativeDuration: 0.25,
+                                                       animations: {
+                                                        self.centerLoadingDot.alpha = 0
+                                    })
+        })
+        UIView.animateKeyframes(withDuration: 1,
+                                delay: 0.666,
+                                options: [.repeat, .autoreverse],
+                                animations: {
+                                    UIView.addKeyframe(withRelativeStartTime: 0,
+                                                       relativeDuration: 0.4,
+                                                       animations: {
+                                                        self.rightLoadingDot.alpha = 0.5
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.4,
+                                                       relativeDuration: 0.03,
+                                                       animations: {
+                                                        self.rightLoadingDot.alpha = 1
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.44,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.rightLoadingDot.alpha = 0
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.48,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.rightLoadingDot.alpha = 1
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.52,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.rightLoadingDot.alpha = 0
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.56,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.rightLoadingDot.alpha = 1
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.60,
+                                                       relativeDuration: 0.04,
+                                                       animations: {
+                                                        self.rightLoadingDot.alpha = 0.5
+                                    })
+                                    UIView.addKeyframe(withRelativeStartTime: 0.6,
+                                                       relativeDuration: 0.25,
+                                                       animations: {
+                                                        self.rightLoadingDot.alpha = 0
+                                    })
+        })
+
+//        UIView.animate(withDuration: 1, delay: 0, options: [.repeat, .autoreverse], animations: { self.leftLoadingDot.alpha = 0 })
+//        UIView.animate(withDuration: 1, delay: 0.333, options: [.repeat, .autoreverse], animations: { self.centerLoadingDot.alpha = 0 })
+//        UIView.animate(withDuration: 1, delay: 0.666, options: [.repeat, .autoreverse], animations: { self.rightLoadingDot.alpha = 0 })
 
     }
 }

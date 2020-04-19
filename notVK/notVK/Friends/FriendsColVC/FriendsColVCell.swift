@@ -15,7 +15,7 @@ class FriendsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.borderColor = UIColor.black.cgColor
-        layer.borderWidth = 0
+//        layer.borderColor = UIColor.black.cgColor
+//        layer.borderWidth = 0
     }
 }

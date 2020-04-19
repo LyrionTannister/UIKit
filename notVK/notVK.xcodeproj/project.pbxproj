@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0912E364244CB858001FEC20 /* GroupsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912E363244CB858001FEC20 /* GroupsFactory.swift */; };
 		09372F1F24337F31009388FA /* FriendsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09372F1E24337F31009388FA /* FriendsTableVC.swift */; };
 		0944FF032435E4AE001918FB /* GroupsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF022435E4AE001918FB /* GroupsTableVC.swift */; };
 		0944FF052435EA2C001918FB /* GroupsVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF042435EA2C001918FB /* GroupsVCell.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0912E363244CB858001FEC20 /* GroupsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsFactory.swift; sourceTree = "<group>"; };
 		09372F1E24337F31009388FA /* FriendsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableVC.swift; sourceTree = "<group>"; };
 		0944FF022435E4AE001918FB /* GroupsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableVC.swift; sourceTree = "<group>"; };
 		0944FF042435EA2C001918FB /* GroupsVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVCell.swift; sourceTree = "<group>"; };
@@ -66,7 +68,7 @@
 		09A7D56B243686A5003B3881 /* ExtensionFriendsColVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFriendsColVC.swift; sourceTree = "<group>"; };
 		09A879DC243A6CF900FF7C06 /* FindFriendsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsTableVC.swift; sourceTree = "<group>"; };
 		09A879DE243A76FC00FF7C06 /* FindFriendsTableVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsTableVCell.swift; sourceTree = "<group>"; };
-		09E5B8EF2448697200116F51 /* CustomSectionDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSectionDesign.swift; path = notVK/Friends/FriendsTableVC/Extensions/CustomSectionDesign.swift; sourceTree = SOURCE_ROOT; };
+		09E5B8EF2448697200116F51 /* CustomSectionDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSectionDesign.swift; path = notVK/UI/CustomSectionDesign.swift; sourceTree = SOURCE_ROOT; };
 		09E5B8F12448889800116F51 /* Dots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dots.swift; sourceTree = "<group>"; };
 		09EE39A1243813AC00E5326B /* LoginGradiend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGradiend.swift; sourceTree = "<group>"; };
 		09EE39A72438237C00E5326B /* FriendsColVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsColVCell.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				0944FF0E2435FC83001918FB /* User.swift */,
 				0944FF112435FC93001918FB /* Group.swift */,
 				094D5383244498D500387523 /* FriendFactory.swift */,
+				0912E363244CB858001FEC20 /* GroupsFactory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,7 +110,6 @@
 		094D538524449E6600387523 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				09E5B8EF2448697200116F51 /* CustomSectionDesign.swift */,
 				094D5381244496D200387523 /* ExtFindFriend.swift */,
 			);
 			path = Extensions;
@@ -251,6 +253,7 @@
 		09EE39A02438138000E5326B /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				09E5B8EF2448697200116F51 /* CustomSectionDesign.swift */,
 				09805C512442194B00926BF9 /* ImageRoundedShadowed.swift */,
 			);
 			path = UI;
@@ -352,6 +355,7 @@
 				09805C522442194B00926BF9 /* ImageRoundedShadowed.swift in Sources */,
 				0944FF032435E4AE001918FB /* GroupsTableVC.swift in Sources */,
 				0944FF0F2435FC83001918FB /* User.swift in Sources */,
+				0912E364244CB858001FEC20 /* GroupsFactory.swift in Sources */,
 				0944FF0A2435F0FE001918FB /* AllGroupsTableVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
