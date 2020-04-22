@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0912E364244CB858001FEC20 /* GroupsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912E363244CB858001FEC20 /* GroupsFactory.swift */; };
+		0912E367244CE36C001FEC20 /* FriendsPhotosLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912E366244CE36C001FEC20 /* FriendsPhotosLayouts.swift */; };
 		09372F1F24337F31009388FA /* FriendsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09372F1E24337F31009388FA /* FriendsTableVC.swift */; };
 		0944FF032435E4AE001918FB /* GroupsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF022435E4AE001918FB /* GroupsTableVC.swift */; };
 		0944FF052435EA2C001918FB /* GroupsVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF042435EA2C001918FB /* GroupsVCell.swift */; };
@@ -30,7 +31,6 @@
 		09997FD62432B1ED003891DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09997FD52432B1ED003891DA /* Assets.xcassets */; };
 		09997FD92432B1ED003891DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09997FD72432B1ED003891DA /* LaunchScreen.storyboard */; };
 		09A7D56924363098003B3881 /* FriendsTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7D56824363098003B3881 /* FriendsTableVCell.swift */; };
-		09A7D56C243686A5003B3881 /* ExtensionFriendsColVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A7D56B243686A5003B3881 /* ExtensionFriendsColVC.swift */; };
 		09A879DD243A6CF900FF7C06 /* FindFriendsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A879DC243A6CF900FF7C06 /* FindFriendsTableVC.swift */; };
 		09A879DF243A76FC00FF7C06 /* FindFriendsTableVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A879DE243A76FC00FF7C06 /* FindFriendsTableVCell.swift */; };
 		09E5B8F02448697200116F51 /* CustomSectionDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5B8EF2448697200116F51 /* CustomSectionDesign.swift */; };
@@ -41,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		0912E363244CB858001FEC20 /* GroupsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsFactory.swift; sourceTree = "<group>"; };
+		0912E366244CE36C001FEC20 /* FriendsPhotosLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotosLayouts.swift; sourceTree = "<group>"; };
 		09372F1E24337F31009388FA /* FriendsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableVC.swift; sourceTree = "<group>"; };
 		0944FF022435E4AE001918FB /* GroupsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableVC.swift; sourceTree = "<group>"; };
 		0944FF042435EA2C001918FB /* GroupsVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVCell.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		09997FD82432B1ED003891DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09997FDA2432B1ED003891DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09A7D56824363098003B3881 /* FriendsTableVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableVCell.swift; sourceTree = "<group>"; };
-		09A7D56B243686A5003B3881 /* ExtensionFriendsColVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFriendsColVC.swift; sourceTree = "<group>"; };
 		09A879DC243A6CF900FF7C06 /* FindFriendsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsTableVC.swift; sourceTree = "<group>"; };
 		09A879DE243A76FC00FF7C06 /* FindFriendsTableVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsTableVCell.swift; sourceTree = "<group>"; };
 		09E5B8EF2448697200116F51 /* CustomSectionDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSectionDesign.swift; path = notVK/UI/CustomSectionDesign.swift; sourceTree = SOURCE_ROOT; };
@@ -85,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0912E365244CE34C001FEC20 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				0912E366244CE36C001FEC20 /* FriendsPhotosLayouts.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
 		0944FF0D2435FC67001918FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,7 +155,6 @@
 		09805C4C2441F94500926BF9 /* FriendsColVC */ = {
 			isa = PBXGroup;
 			children = (
-				09A7D56A24368676003B3881 /* Extensions */,
 				0944FF152436087A001918FB /* FriendsColVC.swift */,
 				09EE39A72438237C00E5326B /* FriendsColVCell.swift */,
 			);
@@ -210,6 +217,7 @@
 		09997FC82432B1E6003891DA /* notVK */ = {
 			isa = PBXGroup;
 			children = (
+				0912E365244CE34C001FEC20 /* Layouts */,
 				09EDD034243967CF00B8DAF6 /* Delegates */,
 				0944FF142435FCFB001918FB /* Friends */,
 				09805C48244063F600926BF9 /* Groups */,
@@ -222,14 +230,6 @@
 				09997FD22432B1E6003891DA /* notVK.xcdatamodeld */,
 			);
 			path = notVK;
-			sourceTree = "<group>";
-		};
-		09A7D56A24368676003B3881 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				09A7D56B243686A5003B3881 /* ExtensionFriendsColVC.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		09EDD034243967CF00B8DAF6 /* Delegates */ = {
@@ -339,7 +339,6 @@
 				09E5B8F22448889800116F51 /* Dots.swift in Sources */,
 				09A879DF243A76FC00FF7C06 /* FindFriendsTableVCell.swift in Sources */,
 				09EE39A82438237D00E5326B /* FriendsColVCell.swift in Sources */,
-				09A7D56C243686A5003B3881 /* ExtensionFriendsColVC.swift in Sources */,
 				09A879DD243A6CF900FF7C06 /* FindFriendsTableVC.swift in Sources */,
 				09997FCE2432B1E6003891DA /* LoginController.swift in Sources */,
 				094D5384244498D500387523 /* FriendFactory.swift in Sources */,
@@ -351,6 +350,7 @@
 				09E5B8F02448697200116F51 /* CustomSectionDesign.swift in Sources */,
 				0944FF162436087A001918FB /* FriendsColVC.swift in Sources */,
 				0944FF0C2435F128001918FB /* AllGroupsTableVC.swift in Sources */,
+				0912E367244CE36C001FEC20 /* FriendsPhotosLayouts.swift in Sources */,
 				0944FF052435EA2C001918FB /* GroupsVCell.swift in Sources */,
 				09805C522442194B00926BF9 /* ImageRoundedShadowed.swift in Sources */,
 				0944FF032435E4AE001918FB /* GroupsTableVC.swift in Sources */,

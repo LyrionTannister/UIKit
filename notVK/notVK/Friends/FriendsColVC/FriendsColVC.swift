@@ -14,11 +14,6 @@ class FriendsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
-
-        //layout?.minimumInteritemSpacing = 0
-        //layout?.minimumLineSpacing = 0
     }
 
     // MARK: - Navigation
