@@ -20,6 +20,7 @@ class FriendsPhotosLayouts: UICollectionViewLayout {
         let itemsCount = collectionView.numberOfItems(inSection: 0)
         guard itemsCount > 0 else { return }
 
+        cellHeight = collectionView.frame.width / CGFloat(self.columnsCount)
         let bigCellWidth = collectionView.frame.width
         let smallCellWidth = collectionView.frame.width / CGFloat(self.columnsCount)
 
@@ -64,5 +65,4 @@ class FriendsPhotosLayouts: UICollectionViewLayout {
     override var collectionViewContentSize: CGSize {
         return CGSize(width: self.collectionView?.frame.width ?? 0, height: self.totalCellHeight)
     }
-    
 }
