@@ -100,6 +100,8 @@ final class RotationPopAnimator: NSObject, UIViewControllerAnimatedTransitioning
 
 class RotationNavigationController: UINavigationController, UINavigationControllerDelegate {
 
+    let interactiveTransition = CustomSwipeCloseTransition()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = self
@@ -107,11 +109,21 @@ class RotationNavigationController: UINavigationController, UINavigationControll
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if operation == .push {
+            self.interactiveTransition.viewController = toVC
             return RotationPushAnimator()
         } else if operation == .pop {
+            if navigationController.viewControllers.first != toVC {
+                self.interactiveTransition.viewController = toVC
+            }
             return RotationPopAnimator()
         }
         return nil
+    }
+
+    func navigationController(_ navigationController: UINavigationController,
+    interactionControllerFor animationController: UIViewControllerAnimatedTransitioning)
+        -> UIViewControllerInteractiveTransitioning? {
+            return interactiveTransition.hasStarted ? interactiveTransition : nil
     }
 }
 

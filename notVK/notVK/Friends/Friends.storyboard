@@ -56,7 +56,7 @@
                                 <connections>
                                     <outlet property="myFriendLabel" destination="wDV-UO-nk7" id="ESt-iQ-YRF"/>
                                     <outlet property="shadowLayer" destination="zFn-IP-2hF" id="nIH-Nk-Lua"/>
-                                    <segue destination="amd-BM-m7o" kind="showDetail" identifier="clickToDetail" id="Ez3-mU-zIR"/>
+                                    <segue destination="amd-BM-m7o" kind="show" identifier="clickToDetail" id="Ez3-mU-zIR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -118,7 +118,7 @@
             <objects>
                 <collectionViewController title="Profile" id="amd-BM-m7o" customClass="FriendsCollectionViewController" customModule="notVK" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="CuA-K6-GeL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewLayout key="collectionViewLayout" id="1Ue-gd-zTg" customClass="FriendsPhotosLayouts" customModule="notVK" customModuleProvider="target"/>
