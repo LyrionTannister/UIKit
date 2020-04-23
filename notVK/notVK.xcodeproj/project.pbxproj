@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0912E364244CB858001FEC20 /* GroupsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912E363244CB858001FEC20 /* GroupsFactory.swift */; };
 		0912E367244CE36C001FEC20 /* FriendsPhotosLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912E366244CE36C001FEC20 /* FriendsPhotosLayouts.swift */; };
+		0924EF5924511032003EAB35 /* RotationNavCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924EF5824511032003EAB35 /* RotationNavCon.swift */; };
 		09372F1F24337F31009388FA /* FriendsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09372F1E24337F31009388FA /* FriendsTableVC.swift */; };
 		0944FF032435E4AE001918FB /* GroupsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF022435E4AE001918FB /* GroupsTableVC.swift */; };
 		0944FF052435EA2C001918FB /* GroupsVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF042435EA2C001918FB /* GroupsVCell.swift */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		0912E363244CB858001FEC20 /* GroupsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsFactory.swift; sourceTree = "<group>"; };
 		0912E366244CE36C001FEC20 /* FriendsPhotosLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotosLayouts.swift; sourceTree = "<group>"; };
+		0924EF5824511032003EAB35 /* RotationNavCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationNavCon.swift; sourceTree = "<group>"; };
 		09372F1E24337F31009388FA /* FriendsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableVC.swift; sourceTree = "<group>"; };
 		0944FF022435E4AE001918FB /* GroupsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableVC.swift; sourceTree = "<group>"; };
 		0944FF042435EA2C001918FB /* GroupsVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVCell.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			children = (
 				09E5B8EF2448697200116F51 /* CustomSectionDesign.swift */,
 				09805C512442194B00926BF9 /* ImageRoundedShadowed.swift */,
+				0924EF5824511032003EAB35 /* RotationNavCon.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				09997FCA2432B1E6003891DA /* AppDelegate.swift in Sources */,
 				09997FCC2432B1E6003891DA /* SceneDelegate.swift in Sources */,
 				09372F1F24337F31009388FA /* FriendsTableVC.swift in Sources */,
+				0924EF5924511032003EAB35 /* RotationNavCon.swift in Sources */,
 				09E5B8F02448697200116F51 /* CustomSectionDesign.swift in Sources */,
 				0944FF162436087A001918FB /* FriendsColVC.swift in Sources */,
 				0944FF0C2435F128001918FB /* AllGroupsTableVC.swift in Sources */,

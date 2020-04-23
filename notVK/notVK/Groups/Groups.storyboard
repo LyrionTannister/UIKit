@@ -9,7 +9,7 @@
         <!--Groups-->
         <scene sceneID="Pct-Cf-lsM">
             <objects>
-                <navigationController id="gQX-Y4-6Nw" sceneMemberID="viewController">
+                <navigationController id="gQX-Y4-6Nw" customClass="RotationNavigationController" customModule="notVK" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Groups" image="person.3.fill" catalog="system" landscapeImage="person.3.fill" id="9XH-Bc-UPS"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CXb-TT-h1p">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -160,7 +160,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="person.3.fill" catalog="system" width="32" height="32"/>
         <image name="plus.square.fill" catalog="system" width="128" height="114"/>
     </resources>
 </document>

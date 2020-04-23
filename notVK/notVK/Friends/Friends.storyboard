@@ -163,7 +163,7 @@
         <!--Friends-->
         <scene sceneID="Xsi-iS-g02">
             <objects>
-                <navigationController id="o9M-9X-nbo" sceneMemberID="viewController">
+                <navigationController id="o9M-9X-nbo" customClass="RotationNavigationController" customModule="notVK" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" image="person.fill" catalog="system" id="Sl1-Rn-gE0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0jx-sB-uVG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
