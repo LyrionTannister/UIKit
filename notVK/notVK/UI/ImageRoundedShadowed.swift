@@ -35,7 +35,7 @@ class ImageRoundedShadowed: UIView {
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOpacity = 1.0
         layer.shadowRadius = 4
-        layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.shadowOffset = CGSize(width: 0, height: 0)
     // MARK: - Image layer properties
         image.layer.cornerRadius = bounds.size.height / 2
         image.layer.masksToBounds = true

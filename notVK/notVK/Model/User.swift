@@ -29,11 +29,12 @@ struct User {
     var city: String
     var sex: Sex
     var fotoPath: String
+    var photos: [String]
     var onLineState: Bool
     
     init(sex: Sex, firstName: String,
          lastName: String, age: Int,
-         city: String, fotoPath: String,
+         city: String, fotoPath: String, photos: [String],
          onLineState: Bool) {
         self.sex = sex
         self.firstName = firstName
@@ -41,6 +42,7 @@ struct User {
         self.age = age
         self.city = city
         self.fotoPath = fotoPath
+        self.photos = photos
         self.onLineState = onLineState
     }
 }

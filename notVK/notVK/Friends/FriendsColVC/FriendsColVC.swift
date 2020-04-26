@@ -10,14 +10,10 @@ import UIKit
 
 class FriendsCollectionViewController: UICollectionViewController {
 
+    var friendsPhotos = [String]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let layout = collectionView
-            .collectionViewLayout as? UICollectionViewFlowLayout
-
-        layout?.minimumInteritemSpacing = 0
-        layout?.minimumLineSpacing = 0
     }
 
     // MARK: - Navigation
@@ -29,16 +25,22 @@ class FriendsCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return friendsPhotos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "friendPhotoCell", for: indexPath) as! FriendsCollectionViewCell
-        let photoName = "photo" + String(indexPath.item + 1)
-        cell.friendPhoto.image = UIImage(named: photoName)
+        cell.friendPhoto.image = UIImage(named: friendsPhotos[indexPath.row])
         return cell
     }
 
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(
+            alongsideTransition: { _ in self.collectionView.collectionViewLayout.invalidateLayout() },
+            completion: { _ in }
+        )
+    }
     // MARK: UICollectionViewDelegate
 
 }

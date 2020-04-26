@@ -74,14 +74,14 @@ class FriendsTableViewController: UITableViewController {
         return viewForHeaderInSection
     }
 
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return friendsSection.map {$0.title}
+    }
+
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return friendsSection[section].title
     }
 
-    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return friendsSection.map {$0.title}
-    }
-    
     func getSortedUsers(searchText: String?) -> [Character:[User]]{
         var tempUsers: [User]
         if let text = searchText?.lowercased(), searchText != "" {
@@ -92,5 +92,15 @@ class FriendsTableViewController: UITableViewController {
         let sortedUsers = Dictionary.init(grouping: tempUsers) { $0.lastName.lowercased().first! }
             .mapValues{ $0.sorted{ $0.lastName.lowercased() < $1.lastName.lowercased() } }
         return sortedUsers
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "clickToDetail" {
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let imagesVC = segue.destination as! FriendsCollectionViewController
+                imagesVC.friendsPhotos = friendsSection[indexPath.section].items[indexPath.row].photos
+            }
+        }
     }
 }
