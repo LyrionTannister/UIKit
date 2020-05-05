@@ -29,7 +29,6 @@ class LoginGradient: UIView {
             self.updateLocations()
         }
     }
-    
     @IBInspectable var startPoint: CGPoint = .zero {
         didSet {
             self.updateStartPoint()
@@ -48,7 +47,6 @@ class LoginGradient: UIView {
         return self.layer as! CAGradientLayer
     }
 
-    
     func updateLocations() {
         self.gradientLayer.locations = [self.startLocation as NSNumber, self.endLocation as NSNumber]
     }
@@ -64,6 +62,4 @@ class LoginGradient: UIView {
     func updateEndPoint() {
         self.gradientLayer.endPoint = endPoint
     }
-
-
 }
