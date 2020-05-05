@@ -27,11 +27,11 @@ final class CustomSwipeCloseTransition: UIPercentDrivenInteractiveTransition {
             self.viewController?.navigationController?.popViewController(animated: true)
         case .changed:
             let translation = recognizer.translation(in: recognizer.view)
-            let relativeTranslation = translation.x / 33
+            let relativeTranslation = translation.y / (recognizer.view?.bounds.width ?? 1)
             let progress = max(0, min(1, relativeTranslation))
 
-            // MARK: Узнаем, что ширина жеста от грани до грани 33
-            print("relativeTranslation: \(translation.x)")
+            print("translation.x: \(translation.x)")
+            print("translation.y: \(translation.y)")
 
             self.shouldFinish = progress > 0.33
 
