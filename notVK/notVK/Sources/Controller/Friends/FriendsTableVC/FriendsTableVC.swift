@@ -25,7 +25,6 @@ class FriendsTableViewController: UITableViewController {
         }
     }
 
-    @IBOutlet weak var searchMyFriend: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,8 +42,6 @@ class FriendsTableViewController: UITableViewController {
         friendsSection = friendsFinder.map {Section(title: String($0.key), items: $0.value)}
 
         friendsSection.sort {$0.title < $1.title}
-        
-        searchMyFriend.delegate = self
     }
 
     // MARK: - Table view data source

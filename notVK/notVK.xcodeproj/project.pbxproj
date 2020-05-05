@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0912E364244CB858001FEC20 /* GroupsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912E363244CB858001FEC20 /* GroupsFactory.swift */; };
 		0912E367244CE36C001FEC20 /* FriendsPhotosLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0912E366244CE36C001FEC20 /* FriendsPhotosLayouts.swift */; };
-		0924EF5924511032003EAB35 /* RotationNavCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924EF5824511032003EAB35 /* RotationNavCon.swift */; };
+		0924EF5924511032003EAB35 /* RotationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924EF5824511032003EAB35 /* RotationAnimator.swift */; };
 		0924EF5B2451B5D2003EAB35 /* CustomSwipeCloseTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0924EF5A2451B5D2003EAB35 /* CustomSwipeCloseTrans.swift */; };
 		09372F1F24337F31009388FA /* FriendsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09372F1E24337F31009388FA /* FriendsTableVC.swift */; };
 		0944FF032435E4AE001918FB /* GroupsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF022435E4AE001918FB /* GroupsTableVC.swift */; };
@@ -45,7 +45,7 @@
 /* Begin PBXFileReference section */
 		0912E363244CB858001FEC20 /* GroupsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsFactory.swift; sourceTree = "<group>"; };
 		0912E366244CE36C001FEC20 /* FriendsPhotosLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotosLayouts.swift; sourceTree = "<group>"; };
-		0924EF5824511032003EAB35 /* RotationNavCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationNavCon.swift; sourceTree = "<group>"; };
+		0924EF5824511032003EAB35 /* RotationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationAnimator.swift; sourceTree = "<group>"; };
 		0924EF5A2451B5D2003EAB35 /* CustomSwipeCloseTrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwipeCloseTrans.swift; sourceTree = "<group>"; };
 		09372F1E24337F31009388FA /* FriendsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableVC.swift; sourceTree = "<group>"; };
 		0944FF022435E4AE001918FB /* GroupsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableVC.swift; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				0944FF152436087A001918FB /* FriendsColVC.swift */,
-				09EE39A72438237C00E5326B /* FriendsColVCell.swift */,
 			);
 			path = FriendsColVC;
 			sourceTree = "<group>";
@@ -159,7 +158,6 @@
 			children = (
 				094D538524449E6600387523 /* Extensions */,
 				09372F1E24337F31009388FA /* FriendsTableVC.swift */,
-				09A7D56824363098003B3881 /* FriendsTableVCell.swift */,
 			);
 			path = FriendsTableVC;
 			sourceTree = "<group>";
@@ -168,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				09A879DC243A6CF900FF7C06 /* FindFriendsTableVC.swift */,
-				09A879DE243A76FC00FF7C06 /* FindFriendsTableVCell.swift */,
 			);
 			path = FindFriendsTableVC;
 			sourceTree = "<group>";
@@ -177,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				0944FF0B2435F128001918FB /* AllGroupsTableVC.swift */,
-				0944FF092435F0FE001918FB /* AllGroupsTableVCell.swift */,
 			);
 			path = AllGroupsTableVC;
 			sourceTree = "<group>";
@@ -186,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				0944FF022435E4AE001918FB /* GroupsTableVC.swift */,
-				0944FF042435EA2C001918FB /* GroupsVCell.swift */,
 			);
 			path = GroupsTableVC;
 			sourceTree = "<group>";
@@ -235,7 +230,7 @@
 				09E5B8F12448889800116F51 /* Dots.swift */,
 				09EE39A1243813AC00E5326B /* LoginGradiend.swift */,
 				09805C512442194B00926BF9 /* ImageRoundedShadowed.swift */,
-				0924EF5824511032003EAB35 /* RotationNavCon.swift */,
+				0924EF5824511032003EAB35 /* RotationAnimator.swift */,
 				0924EF5A2451B5D2003EAB35 /* CustomSwipeCloseTrans.swift */,
 			);
 			path = UI;
@@ -244,13 +239,9 @@
 		84509F0F2461D50F00E04BB3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				09EE39A02438138000E5326B /* UI */,
-				09805C452440638400926BF9 /* Login Screen */,
 				0944FF0D2435FC67001918FB /* Model */,
-				09805C48244063F600926BF9 /* Groups */,
-				0944FF142435FCFB001918FB /* Friends */,
-				09EDD034243967CF00B8DAF6 /* Delegates */,
-				0912E365244CE34C001FEC20 /* Layouts */,
+				84962F6E2461F856007F1232 /* View */,
+				84962F6F2461F8BF007F1232 /* Controller */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -274,6 +265,31 @@
 				84509F122461D6D100E04BB3 /* ViewController.swift */,
 			);
 			path = Abstract;
+			sourceTree = "<group>";
+		};
+		84962F6E2461F856007F1232 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0944FF092435F0FE001918FB /* AllGroupsTableVCell.swift */,
+				09A879DE243A76FC00FF7C06 /* FindFriendsTableVCell.swift */,
+				09EE39A72438237C00E5326B /* FriendsColVCell.swift */,
+				09A7D56824363098003B3881 /* FriendsTableVCell.swift */,
+				0944FF042435EA2C001918FB /* GroupsVCell.swift */,
+				0912E365244CE34C001FEC20 /* Layouts */,
+				09EE39A02438138000E5326B /* UI */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84962F6F2461F8BF007F1232 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				09805C452440638400926BF9 /* Login Screen */,
+				09EDD034243967CF00B8DAF6 /* Delegates */,
+				09805C48244063F600926BF9 /* Groups */,
+				0944FF142435FCFB001918FB /* Friends */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,7 +382,7 @@
 				09997FCA2432B1E6003891DA /* AppDelegate.swift in Sources */,
 				09997FCC2432B1E6003891DA /* SceneDelegate.swift in Sources */,
 				09372F1F24337F31009388FA /* FriendsTableVC.swift in Sources */,
-				0924EF5924511032003EAB35 /* RotationNavCon.swift in Sources */,
+				0924EF5924511032003EAB35 /* RotationAnimator.swift in Sources */,
 				0944FF162436087A001918FB /* FriendsColVC.swift in Sources */,
 				0944FF0C2435F128001918FB /* AllGroupsTableVC.swift in Sources */,
 				0912E367244CE36C001FEC20 /* FriendsPhotosLayouts.swift in Sources */,
