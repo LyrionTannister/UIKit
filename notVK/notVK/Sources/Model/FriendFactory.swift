@@ -8,89 +8,21 @@
 
 import UIKit
 
-class  FriendFactory  {
-    static func makeFriends () -> [User] {
-        return [
-            User(sex: User.Sex.male,
-                 firstName: "Богдан",
-                 lastName: "Титомир",
-                 age: 65,
-                 city: "Питер",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-            User(sex: User.Sex.male,
-                 firstName: "Тупак",
-                 lastName: "Шакур",
-                 age: 14,
-                 city: "Каракум",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-            User(sex: User.Sex.male,
-                 firstName: "Tim",
-                 lastName: "Cook",
-                 age: 55,
-                 city: "San-Francisco",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-            User(sex: User.Sex.male,
-                 firstName: "Tim",
-                 lastName: "Cook",
-                 age: 55,
-                 city: "San-Francisco",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-            User(sex: User.Sex.male,
-                 firstName: "Tim",
-                 lastName: "Cook",
-                 age: 55,
-                 city: "San-Francisco",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-            User(sex: User.Sex.male,
-                 firstName: "Tim",
-                 lastName: "Cook",
-                 age: 55,
-                 city: "San-Francisco",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-            User(sex: User.Sex.male,
-                 firstName: "Tim",
-                 lastName: "Cook",
-                 age: 55,
-                 city: "San-Francisco",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-            User(sex: User.Sex.male,
-                 firstName: "Толя",
-                 lastName: "Чубайс",
-                 age: 58,
-                 city: "Москва",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-            User(sex: User.Sex.female,
-                 firstName: "Оля",
-                 lastName: "Петина",
-                 age: 29,
-                 city: "Экибастуз",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-            User(sex: User.Sex.male,
-                 firstName: "Taras",
-                 lastName: "Bulba",
-                 age: 33,
-                 city: "Zaporizh'e",
-                 fotoPath: "FriendIcon",
-                 photos: ["photo1", "photo2"],
-                 onLineState:  false),
-        ]
+class  Friend  {
+    struct FriendResponse: Decodable {
+        var response: FriendList
+    }
+
+    struct FriendList: Decodable {
+        var count: Int
+        var items: [FriendItem]
+    }
+
+    struct FriendItem: Decodable {
+        var first_name: String
+        var last_name: String
+        var online: Int
+        var photo_100: String?
+        var id: Int
     }
 }

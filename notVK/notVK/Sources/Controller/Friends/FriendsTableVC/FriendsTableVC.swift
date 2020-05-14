@@ -10,6 +10,9 @@ import UIKit
 
 class FriendsTableViewController: UITableViewController {
 
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    
     struct Section <T> {
         var title: String
         var items: [T]
@@ -28,12 +31,14 @@ class FriendsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        friendsDictionary = self.getSortedUsers(searchText: nil)
+        //friendsDictionary = self.getSortedUsers(searchText: nil)
         
     // MARK: - Table view properties
 
         self.clearsSelectionOnViewWillAppear = false
         self.navigationItem.rightBarButtonItem = self.editButtonItem
+
+        sortedFriends(friends: allMyFriends)
 
         let friendsFinder = Dictionary.init(grouping: allMyFriends) {
             $0.lastName.prefix(1)
@@ -79,17 +84,6 @@ class FriendsTableViewController: UITableViewController {
         return friendsSection[section].title
     }
 
-    func getSortedUsers(searchText: String?) -> [Character:[User]]{
-        var tempUsers: [User]
-        if let text = searchText?.lowercased(), searchText != "" {
-            tempUsers = allMyFriends.filter{ $0.lastName.lowercased().contains(text)}
-        } else {
-            tempUsers = allMyFriends
-        }
-        let sortedUsers = Dictionary.init(grouping: tempUsers) { $0.lastName.lowercased().first! }
-            .mapValues{ $0.sorted{ $0.lastName.lowercased() < $1.lastName.lowercased() } }
-        return sortedUsers
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "clickToDetail" {
@@ -99,5 +93,41 @@ class FriendsTableViewController: UITableViewController {
                 imagesVC.friendsPhotos = friendsSection[indexPath.section].items[indexPath.row].photos
             }
         }
+    }
+
+//    func getSortedUsers(searchText: String?) -> [Character:[User]]{
+//        var tempUsers: [User]
+//        if let text = searchText?.lowercased(), searchText != "" {
+//            tempUsers = allMyFriends.filter{ $0.lastName.lowercased().contains(text)}
+//        } else {
+//            tempUsers = allMyFriends
+//        }
+//        let sortedUsers = Dictionary.init(grouping: tempUsers) { $0.lastName.lowercased().first! }
+//            .mapValues{ $0.sorted{ $0.lastName.lowercased() < $1.lastName.lowercased() } }
+//        return sortedUsers
+//    }
+
+    func sortedFriends(friends: [User]) {
+        let sortedUsers = Dictionary.init(grouping: friends) {$0.lastName.lowercased().first!}
+            .mapValues{ $0.sorted{$0.lastName.lowercased() < $1.lastName.lowercased() } }
+               
+        friendsDictionary = sortedUsers
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.view.layoutIfNeeded()
+        UIView.animate(withDuration: 1,
+                       delay: 0,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 0.3,
+                       options: [],
+                       animations: {
+                        self.searchTextField.alpha = 0
+                        self.view.layoutIfNeeded()
+        })
+        searchTextField.text = ""
+        sortedFriends(friends: allMyFriends)
+        searchTextField.endEditing(true)
+        tableView.reloadData()
     }
 }

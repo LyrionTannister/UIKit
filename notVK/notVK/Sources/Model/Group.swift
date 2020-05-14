@@ -7,7 +7,22 @@
 //
 
 import Foundation
-// Friend factory
+
+struct GroupResponse: Decodable {
+    var response: GroupList
+}
+
+struct GroupList: Decodable {
+    var count: Int
+    var items: [GroupItem]
+}
+
+struct GroupItem: Decodable {
+    var photo_50: String?
+    var name: String
+}
+
+//MARK: Legacy Code
 class Group: Comparable {
 
     enum GroupType: CustomStringConvertible {

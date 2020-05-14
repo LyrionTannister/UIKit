@@ -30,6 +30,9 @@
                                         <constraint firstAttribute="width" constant="48" id="9A2-eJ-6Br"/>
                                     </constraints>
                                     <state key="normal" title="Cancel"/>
+                                    <connections>
+                                        <action selector="cancelButtonPressed:" destination="tTl-Uw-3dC" eventType="touchUpInside" id="LKu-6x-anG"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="He8-5B-xqY">
                                     <rect key="frame" x="136" y="7" width="48" height="30"/>
@@ -101,6 +104,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="wsj-j4-G4u" id="hzZ-i6-LvT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUz-mG-Lft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

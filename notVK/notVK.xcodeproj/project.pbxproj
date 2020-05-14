@@ -39,6 +39,11 @@
 		09EE39A2243813AC00E5326B /* LoginGradiend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A1243813AC00E5326B /* LoginGradiend.swift */; };
 		09EE39A82438237D00E5326B /* FriendsColVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A72438237C00E5326B /* FriendsColVCell.swift */; };
 		84509F132461D6D100E04BB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84509F122461D6D100E04BB3 /* ViewController.swift */; };
+		845DAB5E246D6974003439FD /* LoginWKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DAB5D246D6974003439FD /* LoginWKView.swift */; };
+		845DAB60246D70D2003439FD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DAB5F246D70D2003439FD /* Session.swift */; };
+		845DAB63246D74B7003439FD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845DAB62246D74B7003439FD /* WebKit.framework */; };
+		845DAB65246D7661003439FD /* VKRequestDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DAB64246D7661003439FD /* VKRequestDelegate.swift */; };
+		845DAB67246D78E4003439FD /* VKDataSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DAB66246D78E4003439FD /* VKDataSelector.swift */; };
 		84962F6D2461F4DB007F1232 /* CustomSectionDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84962F6C2461F4DB007F1232 /* CustomSectionDesign.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +82,11 @@
 		09EE39A1243813AC00E5326B /* LoginGradiend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGradiend.swift; sourceTree = "<group>"; };
 		09EE39A72438237C00E5326B /* FriendsColVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsColVCell.swift; sourceTree = "<group>"; };
 		84509F122461D6D100E04BB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		845DAB5D246D6974003439FD /* LoginWKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWKView.swift; sourceTree = "<group>"; };
+		845DAB5F246D70D2003439FD /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		845DAB62246D74B7003439FD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		845DAB64246D7661003439FD /* VKRequestDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKRequestDelegate.swift; sourceTree = "<group>"; };
+		845DAB66246D78E4003439FD /* VKDataSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKDataSelector.swift; sourceTree = "<group>"; };
 		84962F6C2461F4DB007F1232 /* CustomSectionDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSectionDesign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845DAB63246D74B7003439FD /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +117,8 @@
 				0944FF112435FC93001918FB /* Group.swift */,
 				094D5383244498D500387523 /* FriendFactory.swift */,
 				0912E363244CB858001FEC20 /* GroupsFactory.swift */,
+				845DAB5F246D70D2003439FD /* Session.swift */,
+				845DAB66246D78E4003439FD /* VKDataSelector.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -132,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				09997FCD2432B1E6003891DA /* LoginController.swift */,
+				845DAB5D246D6974003439FD /* LoginWKView.swift */,
 			);
 			path = "Login Screen";
 			sourceTree = "<group>";
@@ -191,6 +205,7 @@
 			children = (
 				09997FC82432B1E6003891DA /* notVK */,
 				09997FC72432B1E6003891DA /* Products */,
+				845DAB61246D74B6003439FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +233,7 @@
 			children = (
 				09997FC92432B1E6003891DA /* AppDelegate.swift */,
 				09997FCB2432B1E6003891DA /* SceneDelegate.swift */,
+				845DAB64246D7661003439FD /* VKRequestDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -265,6 +281,14 @@
 				84509F122461D6D100E04BB3 /* ViewController.swift */,
 			);
 			path = Abstract;
+			sourceTree = "<group>";
+		};
+		845DAB61246D74B6003439FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				845DAB62246D74B7003439FD /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		84962F6E2461F856007F1232 /* View */ = {
@@ -367,9 +391,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0944FF122435FC93001918FB /* Group.swift in Sources */,
+				845DAB60246D70D2003439FD /* Session.swift in Sources */,
 				0924EF5B2451B5D2003EAB35 /* CustomSwipeCloseTrans.swift in Sources */,
 				094D5382244496D200387523 /* ExtFindFriend.swift in Sources */,
 				09997FD42432B1E6003891DA /* notVK.xcdatamodeld in Sources */,
+				845DAB65246D7661003439FD /* VKRequestDelegate.swift in Sources */,
 				09E5B8F22448889800116F51 /* Dots.swift in Sources */,
 				09A879DF243A76FC00FF7C06 /* FindFriendsTableVCell.swift in Sources */,
 				09EE39A82438237D00E5326B /* FriendsColVCell.swift in Sources */,
@@ -384,6 +410,7 @@
 				09372F1F24337F31009388FA /* FriendsTableVC.swift in Sources */,
 				0924EF5924511032003EAB35 /* RotationAnimator.swift in Sources */,
 				0944FF162436087A001918FB /* FriendsColVC.swift in Sources */,
+				845DAB5E246D6974003439FD /* LoginWKView.swift in Sources */,
 				0944FF0C2435F128001918FB /* AllGroupsTableVC.swift in Sources */,
 				0912E367244CE36C001FEC20 /* FriendsPhotosLayouts.swift in Sources */,
 				0944FF052435EA2C001918FB /* GroupsVCell.swift in Sources */,
@@ -392,6 +419,7 @@
 				0944FF032435E4AE001918FB /* GroupsTableVC.swift in Sources */,
 				0944FF0F2435FC83001918FB /* User.swift in Sources */,
 				0912E364244CB858001FEC20 /* GroupsFactory.swift in Sources */,
+				845DAB67246D78E4003439FD /* VKDataSelector.swift in Sources */,
 				0944FF0A2435F0FE001918FB /* AllGroupsTableVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
