@@ -23,7 +23,7 @@ extension FriendsTableViewController: UISearchBarDelegate {
 //
 //        friendsSection = friendsDictionary.map {Section(title: String($0.key),items: $0.value)}
 
-        friendsSection.sort {$0.title < $1.title}
+        //friendsSection.sort {$0.title < $1.title}
 
         tableView.reloadData()
               

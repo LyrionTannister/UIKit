@@ -11,40 +11,46 @@ import UIKit
 class FriendsTableViewController: UITableViewController {
 
     @IBOutlet weak var searchTextField: UITextField!
-    
-    
+
+    var friendResponse: FriendResponse? = nil
+
     struct Section <T> {
         var title: String
         var items: [T]
     }
 
-    //var allMyFriends = FriendFactory.makeFriends()
-    var friendsSection = [Section<User>]()
+    //var friendsSection = [Section<User>]()
     
-    var friendsDictionary = [Character:[User]]()
-    var firstLetters: [Character] {
-        get {
-            friendsDictionary.keys.sorted()
-        }
-    }
+    //var friendsDictionary = [Character:[User]]()
+//    var firstLetters: [Character] {
+//        get {
+//            friendsDictionary.keys.sorted()
+//        }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         //friendsDictionary = self.getSortedUsers(searchText: nil)
-        
-    // MARK: - Table view properties
+        //sortedFriends(friends: allMyFriends)
+        //let friendsFinder = Dictionary.init(grouping: allMyFriends) { $0.lastName.prefix(1)}
+        //friendsSection = friendsFinder.map {Section(title: String($0.key), items: $0.value)}
+        //friendsSection.sort {$0.title < $1.title}
+
+        // MARK: - Table view properties
 
         self.clearsSelectionOnViewWillAppear = false
         self.navigationItem.rightBarButtonItem = self.editButtonItem
 
-        //sortedFriends(friends: allMyFriends)
-
-        //let friendsFinder = Dictionary.init(grouping: allMyFriends) { $0.lastName.prefix(1)}
-
-        //friendsSection = friendsFinder.map {Section(title: String($0.key), items: $0.value)}
-
-        //friendsSection.sort {$0.title < $1.title}
+        VKRequestDelegate.loadFriends { [weak self] (result) in
+            switch result {
+            case .success(let friendResponse):
+                self?.friendResponse = friendResponse
+                self?.tableView.reloadData()
+            case .failure(let error):
+                print("error: ", error)
+            }
+        }
     }
 
     // MARK: - Table view data source
@@ -54,7 +60,7 @@ class FriendsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return friendResponse?.response.items.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,24 +70,24 @@ class FriendsTableViewController: UITableViewController {
 
         //cell.myFriendLabel.text = friends.firstName + " " + friends.lastName
         //cell.shadowLayer.image.image = UIImage(named: friends.fotoPath)
-        cell.myFriendLabel.text = "test"
+        cell.myFriendLabel.text = (friendResponse?.response.items[indexPath.row].last_name ?? "") + " " + (friendResponse?.response.items[indexPath.row].first_name ?? "")
         
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let viewForHeaderInSection = CustomSectionDesign()
-        viewForHeaderInSection.label.text = String(firstLetters[section].uppercased())
-        return viewForHeaderInSection
-    }
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let viewForHeaderInSection = CustomSectionDesign()
+//        viewForHeaderInSection.label.text = String(firstLetters[section].uppercased())
+//        return viewForHeaderInSection
+//    }
 
-    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return friendsSection.map {$0.title}
-    }
+//    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+//        return friendsSection.map {$0.title}
+//    }
 
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return friendsSection[section].title
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return friendsSection[section].title
+//    }
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -89,7 +95,7 @@ class FriendsTableViewController: UITableViewController {
             
             if let indexPath = tableView.indexPathForSelectedRow {
                 let imagesVC = segue.destination as! FriendsCollectionViewController
-                imagesVC.friendsPhotos = friendsSection[indexPath.section].items[indexPath.row].photos
+                //imagesVC.friendsPhotos = friendsSection[indexPath.section].items[indexPath.row].photos
             }
         }
     }
@@ -106,12 +112,12 @@ class FriendsTableViewController: UITableViewController {
 //        return sortedUsers
 //    }
 
-    func sortedFriends(friends: [User]) {
-        let sortedUsers = Dictionary.init(grouping: friends) {$0.lastName.lowercased().first!}
-            .mapValues{ $0.sorted{$0.lastName.lowercased() < $1.lastName.lowercased() } }
-               
-        friendsDictionary = sortedUsers
-    }
+//    func sortedFriends(friends: [User]) {
+//        let sortedUsers = Dictionary.init(grouping: friends) {$0.lastName.lowercased().first!}
+//            .mapValues{ $0.sorted{$0.lastName.lowercased() < $1.lastName.lowercased() } }
+//
+//        friendsDictionary = sortedUsers
+//    }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.view.layoutIfNeeded()
