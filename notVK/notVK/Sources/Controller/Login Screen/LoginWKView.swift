@@ -99,6 +99,6 @@ extension LoginWKView: WKNavigationDelegate {
         
         decisionHandler(.cancel) // navigation ended
         
-        performSegue(withIdentifier: "loginSegue", sender: nil) // go to the next ViewContoller
+        performSegue(withIdentifier: "loginSeguef", sender: nil) // go to the next ViewContoller
     }
 }
