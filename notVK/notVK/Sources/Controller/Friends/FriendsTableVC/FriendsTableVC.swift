@@ -18,7 +18,7 @@ class FriendsTableViewController: UITableViewController {
         var items: [T]
     }
 
-    var allMyFriends = FriendFactory.makeFriends()
+    //var allMyFriends = FriendFactory.makeFriends()
     var friendsSection = [Section<User>]()
     
     var friendsDictionary = [Character:[User]]()
@@ -38,34 +38,33 @@ class FriendsTableViewController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = false
         self.navigationItem.rightBarButtonItem = self.editButtonItem
 
-        sortedFriends(friends: allMyFriends)
+        //sortedFriends(friends: allMyFriends)
 
-        let friendsFinder = Dictionary.init(grouping: allMyFriends) {
-            $0.lastName.prefix(1)
-        }
+        //let friendsFinder = Dictionary.init(grouping: allMyFriends) { $0.lastName.prefix(1)}
 
-        friendsSection = friendsFinder.map {Section(title: String($0.key), items: $0.value)}
+        //friendsSection = friendsFinder.map {Section(title: String($0.key), items: $0.value)}
 
-        friendsSection.sort {$0.title < $1.title}
+        //friendsSection.sort {$0.title < $1.title}
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return friendsSection.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friendsSection[section].items.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendsCell", for: indexPath) as! FriendsTableViewCell
 
-        let friends = friendsSection[indexPath.section].items[indexPath.row]
+        //let friends = friendsSection[indexPath.section].items[indexPath.row]
 
-        cell.myFriendLabel.text = friends.firstName + " " + friends.lastName
-        cell.shadowLayer.image.image = UIImage(named: friends.fotoPath)
+        //cell.myFriendLabel.text = friends.firstName + " " + friends.lastName
+        //cell.shadowLayer.image.image = UIImage(named: friends.fotoPath)
+        cell.myFriendLabel.text = "test"
         
         return cell
     }
@@ -126,7 +125,7 @@ class FriendsTableViewController: UITableViewController {
                         self.view.layoutIfNeeded()
         })
         searchTextField.text = ""
-        sortedFriends(friends: allMyFriends)
+        //sortedFriends(friends: allMyFriends)
         searchTextField.endEditing(true)
         tableView.reloadData()
     }

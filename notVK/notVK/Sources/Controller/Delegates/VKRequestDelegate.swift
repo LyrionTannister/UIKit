@@ -69,12 +69,4 @@ class VKRequestDelegate {
             }
         }.resume()
     }
-
-    static func loadFotosFriends() {
-        let param: Parameters = ["access_token" : Session.shared.token, "extended" : 1, "v" : "5.103", "album_id" : "profile", "owner_id" : 0000000]
-        AF.request(VKServices.shared.baseUrl + VKServices.Method.getPhotos.methodName, method: .get, parameters: param).responseJSON { response in
-            guard let value = response.value else { return }
-            print(value)
-        }
-    }
 }

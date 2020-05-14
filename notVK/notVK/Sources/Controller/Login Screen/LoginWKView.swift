@@ -16,8 +16,6 @@ class LoginWKView: UIViewController {
     
     let notificationCenter = NotificationCenter.default
 
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         WKLoginView.load(VKRequestDelegate.loginRequest())
