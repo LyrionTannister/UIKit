@@ -10,34 +10,21 @@ import UIKit
 import WebKit
 
 class LoginWKView: UIViewController {
-
     
-    @IBOutlet weak var WKLoginView: WKWebView! {
-        didSet {
-            var urlComponents = URLComponents()
-            urlComponents.scheme = "http"
-            urlComponents.host = "oauth.vk.com"
-            urlComponents.path = "/authorize"
-            urlComponents.queryItems = [URLQueryItem(name: "client_id", value: "7450792"),
-                                        URLQueryItem(name: "display", value: "mobile"),
-                                        URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
-                                        URLQueryItem(name: "scope", value: "262150"),
-                                        URLQueryItem(name: "response_type", value: "token"),
-                                        URLQueryItem(name: "v", value: "token")]
-            
-            let request = URLRequest(url: urlComponents.url!)
-            WKLoginView.load(request)
-            WKLoginView.navigationDelegate = self
-        }
-    }
+    @IBOutlet weak var WKLoginView: WKWebView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     let notificationCenter = NotificationCenter.default
 
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        WKLoginView.load(VKRequestDelegate.loginRequest())
+        WKLoginView.navigationDelegate = self
         
-        //let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        //loginScrollView?.addGestureRecognizer(hideKeyboardGesture)
+        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        WKLoginView?.addGestureRecognizer(hideKeyboardGesture)
 
         notificationCenter.addObserver(
             self,
@@ -67,15 +54,15 @@ class LoginWKView: UIViewController {
     @objc func keyboardWasShown(notification: Notification) {
         let userInfo = (notification as NSNotification).userInfo as! [String: Any]
         let frame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
-        //scrollBottomConstraint.constant = frame.height
+        bottomConstraint.constant = frame.height
     }
 
     @objc func keyboardWillBeHidden(notification: Notification) {
-        //scrollBottomConstraint.constant = 0
+        bottomConstraint.constant = 0
     }
 
     @objc func hideKeyboard() {
-        //self.loginScrollView.endEditing(true)
+        self.WKLoginView.endEditing(true)
     }
 }
 

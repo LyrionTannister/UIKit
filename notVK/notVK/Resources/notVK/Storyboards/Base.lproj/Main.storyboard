@@ -218,6 +218,7 @@
                     </view>
                     <connections>
                         <outlet property="WKLoginView" destination="SVw-0B-BJk" id="V3J-CJ-iBQ"/>
+                        <outlet property="bottomConstraint" destination="Wxa-0j-aK1" id="ezh-u0-k4O"/>
                         <segue destination="nnN-oH-Uzc" kind="show" identifier="loginSegue" id="L4I-n0-kCR"/>
                     </connections>
                 </viewController>

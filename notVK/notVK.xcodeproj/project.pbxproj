@@ -20,7 +20,7 @@
 		0944FF122435FC93001918FB /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF112435FC93001918FB /* Group.swift */; };
 		0944FF162436087A001918FB /* FriendsColVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0944FF152436087A001918FB /* FriendsColVC.swift */; };
 		094D5382244496D200387523 /* ExtFindFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094D5381244496D200387523 /* ExtFindFriend.swift */; };
-		094D5384244498D500387523 /* FriendFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094D5383244498D500387523 /* FriendFactory.swift */; };
+		094D5384244498D500387523 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094D5383244498D500387523 /* Friend.swift */; };
 		09805C442440631700926BF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09805C422440631700926BF9 /* Main.storyboard */; };
 		09805C47244063E300926BF9 /* Groups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09805C46244063E300926BF9 /* Groups.storyboard */; };
 		09805C4B2441F4D500926BF9 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09805C4A2441F4D500926BF9 /* Friends.storyboard */; };
@@ -61,7 +61,7 @@
 		0944FF112435FC93001918FB /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		0944FF152436087A001918FB /* FriendsColVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsColVC.swift; sourceTree = "<group>"; };
 		094D5381244496D200387523 /* ExtFindFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtFindFriend.swift; sourceTree = "<group>"; };
-		094D5383244498D500387523 /* FriendFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFactory.swift; sourceTree = "<group>"; };
+		094D5383244498D500387523 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		09805C432440631700926BF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = notVK/Storyboards/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09805C46244063E300926BF9 /* Groups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Groups.storyboard; sourceTree = "<group>"; };
 		09805C4A2441F4D500926BF9 /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			children = (
 				0944FF0E2435FC83001918FB /* User.swift */,
 				0944FF112435FC93001918FB /* Group.swift */,
-				094D5383244498D500387523 /* FriendFactory.swift */,
+				094D5383244498D500387523 /* Friend.swift */,
 				0912E363244CB858001FEC20 /* GroupsFactory.swift */,
 				845DAB5F246D70D2003439FD /* Session.swift */,
 				845DAB66246D78E4003439FD /* VKDataSelector.swift */,
@@ -401,7 +401,7 @@
 				09EE39A82438237D00E5326B /* FriendsColVCell.swift in Sources */,
 				09A879DD243A6CF900FF7C06 /* FindFriendsTableVC.swift in Sources */,
 				09997FCE2432B1E6003891DA /* LoginController.swift in Sources */,
-				094D5384244498D500387523 /* FriendFactory.swift in Sources */,
+				094D5384244498D500387523 /* Friend.swift in Sources */,
 				09A7D56924363098003B3881 /* FriendsTableVCell.swift in Sources */,
 				09EE39A2243813AC00E5326B /* LoginGradiend.swift in Sources */,
 				84962F6D2461F4DB007F1232 /* CustomSectionDesign.swift in Sources */,

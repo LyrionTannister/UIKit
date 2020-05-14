@@ -9,13 +9,13 @@
 import Foundation
 
 class VKRequestDelegate {
-    static func vkLoginRequest() -> URLRequest {
+    static func loginRequest() -> URLRequest {
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "oauth.vk.com"
         urlComponents.path = "/authorize"
         urlComponents.queryItems = [
-            URLQueryItem(name: "client_id", value: "7437118"),
+            URLQueryItem(name: "client_id", value: "0000000"),
             URLQueryItem(name: "display", value: "mobile"),
             URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
             URLQueryItem(name: "scope", value: "262150"),
@@ -68,5 +68,13 @@ class VKRequestDelegate {
                 }
             }
         }.resume()
+    }
+
+    static func loadFotosFriends() {
+        let param: Parameters = ["access_token" : Session.shared.token, "extended" : 1, "v" : "5.103", "album_id" : "profile", "owner_id" : 0000000]
+        AF.request(VKServices.shared.baseUrl + VKServices.Method.getPhotos.methodName, method: .get, parameters: param).responseJSON { response in
+            guard let value = response.value else { return }
+            print(value)
+        }
     }
 }
