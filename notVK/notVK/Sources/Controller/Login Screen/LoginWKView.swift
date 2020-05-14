@@ -84,21 +84,16 @@ extension LoginWKView: WKNavigationDelegate {
                 return dict
         }
         
-        guard let token = parameters["access_token"], let userId = parameters["user_id"] else { return } // check availability of received parameters
+        guard let token = parameters["access_token"], let userId = parameters["user_id"] else { return }
         
-        Session.shared.token = token // save received token to the Session singleton
-        Session.shared.userId = Int(userId)! // save received userId the the Session singleton
+        Session.shared.token = token
+        Session.shared.userId = Int(userId) ?? 0
         
         print("Current token: \(Session.shared.token)")
         print("Current userID: \(Session.shared.userId)\n")
-        
-        //vkService.getMyFriendsList() // get friends list for userID
-        //vkService.getPhotosOfSelectedFriend() // get photos for userID
-        //vkService.getCommunitiesListOfSelectedFriend() // get groups for userID
-        //vkService.getAllCommunitiesList() // get groups for search request
-        
-        decisionHandler(.cancel) // navigation ended
-        
-        performSegue(withIdentifier: "loginSeguef", sender: nil) // go to the next ViewContoller
+
+        decisionHandler(.cancel)
+
+        performSegue(withIdentifier: "loginSegue", sender: nil)
     }
 }

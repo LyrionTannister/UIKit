@@ -211,7 +211,9 @@
                         <constraints>
                             <constraint firstItem="JBK-9Q-gHH" firstAttribute="trailing" secondItem="SVw-0B-BJk" secondAttribute="trailing" id="ExD-BC-LmU"/>
                             <constraint firstItem="JBK-9Q-gHH" firstAttribute="bottom" secondItem="SVw-0B-BJk" secondAttribute="bottom" id="Wxa-0j-aK1"/>
+                            <constraint firstItem="SVw-0B-BJk" firstAttribute="centerY" secondItem="8hH-Td-UXj" secondAttribute="centerY" id="hgv-PP-Tvo"/>
                             <constraint firstItem="SVw-0B-BJk" firstAttribute="top" secondItem="JBK-9Q-gHH" secondAttribute="top" id="iVw-6g-nDy"/>
+                            <constraint firstItem="SVw-0B-BJk" firstAttribute="centerX" secondItem="8hH-Td-UXj" secondAttribute="centerX" id="k8R-kP-hMS"/>
                             <constraint firstItem="SVw-0B-BJk" firstAttribute="leading" secondItem="JBK-9Q-gHH" secondAttribute="leading" id="zMi-bi-LFo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JBK-9Q-gHH"/>
