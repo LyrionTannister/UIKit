@@ -72,6 +72,9 @@ class FriendsTableViewController: UITableViewController {
         
         cell.myFriendLabel.text = (friendResponse?.response.items[indexPath.row].last_name ?? "") + " " + (friendResponse?.response.items[indexPath.row].first_name ?? "")
         //VKRequestDelegate.loadFriendPhoto(friendId: <#T##String#>, completion: <#T##(Result<PhotoResponse, Error>) -> Void#>)
+        if let photoURL = NSURL(string: (friendResponse?.response.items[indexPath.row].photo_100)!) {
+            cell.shadowLayer.image.image = UIImage(data: try! Data(contentsOf: photoURL as URL))
+        }
         return cell
     }
 
