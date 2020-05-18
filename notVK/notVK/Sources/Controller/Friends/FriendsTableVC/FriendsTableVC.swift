@@ -19,21 +19,20 @@ class FriendsTableViewController: UITableViewController {
         var items: [T]
     }
 
-    //var friendsSection = [Section<User>]()
-    
-    //var friendsDictionary = [Character:[User]]()
-//    var firstLetters: [Character] {
-//        get {
-//            friendsDictionary.keys.sorted()
-//        }
-//    }
+    var friendsSection = [Section<FriendItem>]()
+    var friendsDictionary : [Character:[FriendItem]]?
+    var firstLetters: [Character]? {
+        get {
+            friendsDictionary?.keys.sorted() ?? nil
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //friendsDictionary = self.getSortedUsers(searchText: nil)
+        friendsDictionary = self.getSortedUsers(searchText: nil)
         //sortedFriends(friends: allMyFriends)
-        //let friendsFinder = Dictionary.init(grouping: allMyFriends) { $0.lastName.prefix(1)}
+        //let friendsFinder : [FriendItem]? = Dictionary.init(grouping: friendResponse?.response.items ?? nil) { $0.last_name.prefix(1)}
         //friendsSection = friendsFinder.map {Section(title: String($0.key), items: $0.value)}
         //friendsSection.sort {$0.title < $1.title}
 
@@ -70,8 +69,9 @@ class FriendsTableViewController: UITableViewController {
 
         //cell.myFriendLabel.text = friends.firstName + " " + friends.lastName
         //cell.shadowLayer.image.image = UIImage(named: friends.fotoPath)
-        cell.myFriendLabel.text = (friendResponse?.response.items[indexPath.row].last_name ?? "") + " " + (friendResponse?.response.items[indexPath.row].first_name ?? "")
         
+        cell.myFriendLabel.text = (friendResponse?.response.items[indexPath.row].last_name ?? "") + " " + (friendResponse?.response.items[indexPath.row].first_name ?? "")
+        //VKRequestDelegate.loadFriendPhoto(friendId: <#T##String#>, completion: <#T##(Result<PhotoResponse, Error>) -> Void#>)
         return cell
     }
 
@@ -100,17 +100,20 @@ class FriendsTableViewController: UITableViewController {
         }
     }
 
-//    func getSortedUsers(searchText: String?) -> [Character:[User]]{
-//        var tempUsers: [User]
-//        if let text = searchText?.lowercased(), searchText != "" {
-//            tempUsers = allMyFriends.filter{ $0.lastName.lowercased().contains(text)}
-//        } else {
-//            tempUsers = allMyFriends
-//        }
-//        let sortedUsers = Dictionary.init(grouping: tempUsers) { $0.lastName.lowercased().first! }
-//            .mapValues{ $0.sorted{ $0.lastName.lowercased() < $1.lastName.lowercased() } }
-//        return sortedUsers
-//    }
+    func getSortedUsers(searchText: String?) -> [Character:[FriendItem]]?{
+        var tempUsers: [FriendItem]?
+        if let text = searchText?.lowercased(), searchText != "" {
+            tempUsers = friendResponse?.response.items.filter{ $0.last_name.lowercased().contains(text)}
+        } else {
+            tempUsers = friendResponse?.response.items
+        }
+        if let isUsersExists = tempUsers {
+            let sortedUsers = Dictionary.init(grouping: isUsersExists) { $0.last_name.lowercased().first! }.mapValues{ $0.sorted{ $0.last_name.lowercased() < $1.last_name.lowercased() } }
+            return sortedUsers
+        } else {
+            return nil
+        }
+    }
 
 //    func sortedFriends(friends: [User]) {
 //        let sortedUsers = Dictionary.init(grouping: friends) {$0.lastName.lowercased().first!}

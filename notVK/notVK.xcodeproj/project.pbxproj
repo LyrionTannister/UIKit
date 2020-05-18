@@ -38,6 +38,7 @@
 		09E5B8F22448889800116F51 /* Dots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E5B8F12448889800116F51 /* Dots.swift */; };
 		09EE39A2243813AC00E5326B /* LoginGradiend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A1243813AC00E5326B /* LoginGradiend.swift */; };
 		09EE39A82438237D00E5326B /* FriendsColVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE39A72438237C00E5326B /* FriendsColVCell.swift */; };
+		8440DA7D24729A9200A72D9B /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8440DA7C24729A9200A72D9B /* Photo.swift */; };
 		84509F132461D6D100E04BB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84509F122461D6D100E04BB3 /* ViewController.swift */; };
 		845DAB5E246D6974003439FD /* LoginWKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DAB5D246D6974003439FD /* LoginWKView.swift */; };
 		845DAB60246D70D2003439FD /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845DAB5F246D70D2003439FD /* Session.swift */; };
@@ -81,6 +82,7 @@
 		09E5B8F12448889800116F51 /* Dots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dots.swift; sourceTree = "<group>"; };
 		09EE39A1243813AC00E5326B /* LoginGradiend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGradiend.swift; sourceTree = "<group>"; };
 		09EE39A72438237C00E5326B /* FriendsColVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsColVCell.swift; sourceTree = "<group>"; };
+		8440DA7C24729A9200A72D9B /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		84509F122461D6D100E04BB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		845DAB5D246D6974003439FD /* LoginWKView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWKView.swift; sourceTree = "<group>"; };
 		845DAB5F246D70D2003439FD /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				0944FF0E2435FC83001918FB /* User.swift */,
 				0944FF112435FC93001918FB /* Group.swift */,
 				094D5383244498D500387523 /* Friend.swift */,
+				8440DA7C24729A9200A72D9B /* Photo.swift */,
 				0912E363244CB858001FEC20 /* GroupsFactory.swift */,
 				845DAB5F246D70D2003439FD /* Session.swift */,
 				845DAB66246D78E4003439FD /* VKDataSelector.swift */,
@@ -406,6 +409,7 @@
 				09EE39A2243813AC00E5326B /* LoginGradiend.swift in Sources */,
 				84962F6D2461F4DB007F1232 /* CustomSectionDesign.swift in Sources */,
 				09997FCA2432B1E6003891DA /* AppDelegate.swift in Sources */,
+				8440DA7D24729A9200A72D9B /* Photo.swift in Sources */,
 				09997FCC2432B1E6003891DA /* SceneDelegate.swift in Sources */,
 				09372F1F24337F31009388FA /* FriendsTableVC.swift in Sources */,
 				0924EF5924511032003EAB35 /* RotationAnimator.swift in Sources */,
