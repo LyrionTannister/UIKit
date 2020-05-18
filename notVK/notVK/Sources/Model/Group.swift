@@ -18,8 +18,12 @@ struct GroupList: Decodable {
 }
 
 struct GroupItem: Decodable {
-    var photo_50: String?
+    var photo50: String?
     var name: String
+    enum CodingKeys: String, CodingKey {
+        case photo50 = "photo_50"
+        case name = "name"
+    }
 }
 
 //MARK: Legacy Code

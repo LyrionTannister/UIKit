@@ -41,7 +41,7 @@ class GroupsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath) as! GroupsViewCell
         //cell.imageRoundedShadowed.image.image = UIImage(named: group.name)
         cell.myGroupLabel.text = groupResponse?.response.items[indexPath.row].name ?? ""
-        if let photoURL = URL(string: (groupResponse?.response.items[indexPath.row].photo_50)!) {
+        if let photoURL = URL(string: (groupResponse?.response.items[indexPath.row].photo50)!) {
             cell.imageRoundedShadowed.image.image = UIImage(data: try! Data(contentsOf: photoURL as URL))
         }
         return cell

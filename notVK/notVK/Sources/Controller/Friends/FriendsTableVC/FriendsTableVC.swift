@@ -70,9 +70,9 @@ class FriendsTableViewController: UITableViewController {
         //cell.myFriendLabel.text = friends.firstName + " " + friends.lastName
         //cell.shadowLayer.image.image = UIImage(named: friends.fotoPath)
         
-        cell.myFriendLabel.text = (friendResponse?.response.items[indexPath.row].last_name ?? "") + " " + (friendResponse?.response.items[indexPath.row].first_name ?? "")
+        cell.myFriendLabel.text = (friendResponse?.response.items[indexPath.row].lastName ?? "") + " " + (friendResponse?.response.items[indexPath.row].firstName ?? "")
 
-        if let photoURL = URL(string: (friendResponse?.response.items[indexPath.row].photo_100)!) {
+        if let photoURL = URL(string: (friendResponse?.response.items[indexPath.row].photo100)!) {
             cell.shadowLayer.image.image = UIImage(data: try! Data(contentsOf: photoURL as URL))
         }
         return cell
@@ -106,12 +106,12 @@ class FriendsTableViewController: UITableViewController {
     func getSortedUsers(searchText: String?) -> [Character:[FriendItem]]?{
         var tempUsers: [FriendItem]?
         if let text = searchText?.lowercased(), searchText != "" {
-            tempUsers = friendResponse?.response.items.filter{ $0.last_name.lowercased().contains(text)}
+            tempUsers = friendResponse?.response.items.filter{ $0.lastName.lowercased().contains(text)}
         } else {
             tempUsers = friendResponse?.response.items
         }
         if let isUsersExists = tempUsers {
-            let sortedUsers = Dictionary.init(grouping: isUsersExists) { $0.last_name.lowercased().first! }.mapValues{ $0.sorted{ $0.last_name.lowercased() < $1.last_name.lowercased() } }
+            let sortedUsers = Dictionary.init(grouping: isUsersExists) { $0.lastName.lowercased().first! }.mapValues{ $0.sorted{ $0.lastName.lowercased() < $1.lastName.lowercased() } }
             return sortedUsers
         } else {
             return nil
